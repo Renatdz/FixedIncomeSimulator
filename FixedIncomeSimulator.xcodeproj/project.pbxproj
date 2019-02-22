@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		73CF7BF0AF52C8CF70233B72 /* Pods_FixedIncomeSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
-		A569AA7C222073FF00CFF5A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* ViewController.swift */; };
+		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
 		A569AA842220740100CFF5A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569AA822220740100CFF5A7 /* LaunchScreen.storyboard */; };
+		A569AAAC22207E4D00CFF5A7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */; };
+		A569AAAE22207EB600CFF5A7 /* FormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAAD22207EB600CFF5A7 /* FormCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 		9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A569AA7B222073FF00CFF5A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		A569AA802220740100CFF5A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A569AA832220740100CFF5A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A569AA852220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		A569AA902220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569AA952220740100CFF5A7 /* FixedIncomeSimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixedIncomeSimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA9B2220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A569AAAD22207EB600CFF5A7 /* FormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinator.swift; sourceTree = "<group>"; };
 		F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +121,8 @@
 			children = (
 				A569AA852220740100CFF5A7 /* Info.plist */,
 				A569AA79222073FF00CFF5A7 /* AppDelegate.swift */,
-				A569AA7B222073FF00CFF5A7 /* ViewController.swift */,
+				A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */,
+				A569AAA922207CD800CFF5A7 /* Features */,
 				A569AAA72220767300CFF5A7 /* Resources */,
 			);
 			path = FixedIncomeSimulator;
@@ -146,6 +151,23 @@
 				A569AA822220740100CFF5A7 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A569AAA922207CD800CFF5A7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A569AAAA22207CE200CFF5A7 /* Form */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A569AAAA22207CE200CFF5A7 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				A569AAAD22207EB600CFF5A7 /* FormCoordinator.swift */,
+				A569AA7B222073FF00CFF5A7 /* FormViewController.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,7 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A569AA7C222073FF00CFF5A7 /* ViewController.swift in Sources */,
+				A569AAAE22207EB600CFF5A7 /* FormCoordinator.swift in Sources */,
+				A569AAAC22207E4D00CFF5A7 /* AppCoordinator.swift in Sources */,
+				A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */,
 				A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
