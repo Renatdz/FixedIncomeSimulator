@@ -8,8 +8,13 @@
 import UIKit
 
 final class FormViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
+    private let formView = FormView()
+}
+
+// MARK: - Lifecycle
+extension FormViewController {
+    override func loadView() {
+        super.loadView()
+        view = formView
     }
 }

@@ -14,6 +14,9 @@
 		A569AA842220740100CFF5A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569AA822220740100CFF5A7 /* LaunchScreen.storyboard */; };
 		A569AAAC22207E4D00CFF5A7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */; };
 		A569AAAE22207EB600CFF5A7 /* FormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAAD22207EB600CFF5A7 /* FormCoordinator.swift */; };
+		A569AAB22220843600CFF5A7 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAB12220843600CFF5A7 /* FormView.swift */; };
+		A569AAB5222084F600CFF5A7 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAB4222084F600CFF5A7 /* CodableView.swift */; };
+		A569AAB72220854000CFF5A7 /* NSLayoutConstraint+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAB62220854000CFF5A7 /* NSLayoutConstraint+Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		A569AA9B2220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A569AAAD22207EB600CFF5A7 /* FormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinator.swift; sourceTree = "<group>"; };
+		A569AAB12220843600CFF5A7 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		A569AAB4222084F600CFF5A7 /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
+		A569AAB62220854000CFF5A7 /* NSLayoutConstraint+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Util.swift"; sourceTree = "<group>"; };
 		F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +130,7 @@
 				A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */,
 				A569AAA922207CD800CFF5A7 /* Features */,
 				A569AAA72220767300CFF5A7 /* Resources */,
+				A569AAB3222084E000CFF5A7 /* Utils */,
 			);
 			path = FixedIncomeSimulator;
 			sourceTree = "<group>";
@@ -166,8 +173,18 @@
 			children = (
 				A569AAAD22207EB600CFF5A7 /* FormCoordinator.swift */,
 				A569AA7B222073FF00CFF5A7 /* FormViewController.swift */,
+				A569AAB12220843600CFF5A7 /* FormView.swift */,
 			);
 			path = Form;
+			sourceTree = "<group>";
+		};
+		A569AAB3222084E000CFF5A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A569AAB4222084F600CFF5A7 /* CodableView.swift */,
+				A569AAB62220854000CFF5A7 /* NSLayoutConstraint+Util.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +363,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A569AAAE22207EB600CFF5A7 /* FormCoordinator.swift in Sources */,
+				A569AAB5222084F600CFF5A7 /* CodableView.swift in Sources */,
 				A569AAAC22207E4D00CFF5A7 /* AppCoordinator.swift in Sources */,
+				A569AAB22220843600CFF5A7 /* FormView.swift in Sources */,
+				A569AAB72220854000CFF5A7 /* NSLayoutConstraint+Util.swift in Sources */,
 				A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */,
 				A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */,
 			);
