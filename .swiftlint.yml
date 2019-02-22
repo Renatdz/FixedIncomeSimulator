@@ -1,4 +1,4 @@
-	disabled_rules: # rule identifiers to exclude from running
+disabled_rules: # rule identifiers to exclude from running
   - empty_enum_arguments //deixa
   - type_body_length
 included:

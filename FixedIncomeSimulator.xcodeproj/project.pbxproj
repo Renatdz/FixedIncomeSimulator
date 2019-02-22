@@ -10,11 +10,8 @@
 		73CF7BF0AF52C8CF70233B72 /* Pods_FixedIncomeSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* ViewController.swift */; };
-		A569AA7F222073FF00CFF5A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569AA7D222073FF00CFF5A7 /* Main.storyboard */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
 		A569AA842220740100CFF5A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569AA822220740100CFF5A7 /* LaunchScreen.storyboard */; };
-		A569AA8F2220740100CFF5A7 /* FixedIncomeSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA8E2220740100CFF5A7 /* FixedIncomeSimulatorTests.swift */; };
-		A569AA9A2220740100CFF5A7 /* FixedIncomeSimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA992220740100CFF5A7 /* FixedIncomeSimulatorUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +37,12 @@
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A569AA7E222073FF00CFF5A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A569AA802220740100CFF5A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A569AA832220740100CFF5A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A569AA852220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569AA8A2220740100CFF5A7 /* FixedIncomeSimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixedIncomeSimulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A569AA8E2220740100CFF5A7 /* FixedIncomeSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeSimulatorTests.swift; sourceTree = "<group>"; };
 		A569AA902220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569AA952220740100CFF5A7 /* FixedIncomeSimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixedIncomeSimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A569AA992220740100CFF5A7 /* FixedIncomeSimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeSimulatorUITests.swift; sourceTree = "<group>"; };
 		A569AA9B2220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +79,6 @@
 				3C42C246EA9CF56D9E46DC32 /* Pods-FixedIncomeSimulator.debug.xcconfig */,
 				F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,12 +115,10 @@
 		A569AA78222073FF00CFF5A7 /* FixedIncomeSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				A569AA852220740100CFF5A7 /* Info.plist */,
 				A569AA79222073FF00CFF5A7 /* AppDelegate.swift */,
 				A569AA7B222073FF00CFF5A7 /* ViewController.swift */,
-				A569AA7D222073FF00CFF5A7 /* Main.storyboard */,
-				A569AA802220740100CFF5A7 /* Assets.xcassets */,
-				A569AA822220740100CFF5A7 /* LaunchScreen.storyboard */,
-				A569AA852220740100CFF5A7 /* Info.plist */,
+				A569AAA72220767300CFF5A7 /* Resources */,
 			);
 			path = FixedIncomeSimulator;
 			sourceTree = "<group>";
@@ -135,7 +126,6 @@
 		A569AA8D2220740100CFF5A7 /* FixedIncomeSimulatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A569AA8E2220740100CFF5A7 /* FixedIncomeSimulatorTests.swift */,
 				A569AA902220740100CFF5A7 /* Info.plist */,
 			);
 			path = FixedIncomeSimulatorTests;
@@ -144,10 +134,18 @@
 		A569AA982220740100CFF5A7 /* FixedIncomeSimulatorUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A569AA992220740100CFF5A7 /* FixedIncomeSimulatorUITests.swift */,
 				A569AA9B2220740100CFF5A7 /* Info.plist */,
 			);
 			path = FixedIncomeSimulatorUITests;
+			sourceTree = "<group>";
+		};
+		A569AAA72220767300CFF5A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A569AA802220740100CFF5A7 /* Assets.xcassets */,
+				A569AA822220740100CFF5A7 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +156,7 @@
 			buildConfigurationList = A569AA9E2220740100CFF5A7 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulator" */;
 			buildPhases = (
 				D25C2F48BB36B66C276BEA64 /* [CP] Check Pods Manifest.lock */,
+				A569AAA8222076CD00CFF5A7 /* [SL] Lint */,
 				A569AA72222073FF00CFF5A7 /* Sources */,
 				A569AA73222073FF00CFF5A7 /* Frameworks */,
 				A569AA74222073FF00CFF5A7 /* Resources */,
@@ -257,7 +256,6 @@
 			files = (
 				A569AA842220740100CFF5A7 /* LaunchScreen.storyboard in Resources */,
 				A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */,
-				A569AA7F222073FF00CFF5A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +276,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A569AAA8222076CD00CFF5A7 /* [SL] Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SL] Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		D25C2F48BB36B66C276BEA64 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,7 +332,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A569AA8F2220740100CFF5A7 /* FixedIncomeSimulatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A569AA9A2220740100CFF5A7 /* FixedIncomeSimulatorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +358,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A569AA7D222073FF00CFF5A7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A569AA7E222073FF00CFF5A7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A569AA822220740100CFF5A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -495,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rm.FixedIncomeSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -515,7 +521,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rm.FixedIncomeSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
