@@ -211,9 +211,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods
-  fastlane
-  xcov
+  cocoapods (~> 1.6.1)
+  fastlane (~> 2.116.1)
+  xcov (~> 1.5.0)
 
 RUBY VERSION
    ruby 2.3.1p112
