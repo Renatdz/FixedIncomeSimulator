@@ -30,10 +30,6 @@ extension FormViewController {
         view = formView
         formView.delegate = self
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
 // MARK: - FormViewDelegate
@@ -42,7 +38,8 @@ extension FormViewController: FormViewDelegate {
         formViewModel.simulateIncome(investedValue: investedValue,
                                      investimentDueDate: investimentDueDate,
                                      cdiPercentage: cdiPercentage) { error in
-                                        print(error.localizedDescription)
+                                        let alertView = ErrorView(message: error.localizedDescription)
+                                        alertView.show(in: self)
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol Coordinator: class {
+protocol Coordinator: class {
     var navigationController: UINavigationController { get set }
 
     func start()

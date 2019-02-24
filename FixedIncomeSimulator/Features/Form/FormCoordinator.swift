@@ -15,8 +15,16 @@ final class FormCoordinator: Coordinator {
     }
 
     func start() {
-        let formViewModel = FormViewModel()
+        let formViewModel = FormViewModel(delegate: self)
         let formViewController = FormViewController(viewModel: formViewModel)
         navigationController.pushViewController(formViewController, animated: true)
+    }
+}
+
+// MARK: - FormViewModelDelegate
+extension FormCoordinator: FormViewModelDelegate {
+    func showResult() {
+        let resultCoordinator = ResultCoordinator(navigationController: navigationController)
+        resultCoordinator.start()
     }
 }
