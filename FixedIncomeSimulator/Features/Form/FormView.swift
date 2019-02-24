@@ -7,13 +7,19 @@
 
 import UIKit
 
+protocol FormViewDelegate: class {
+    func simulateWasPressed(investedValue: String, investimentDueDate: String, cdiPercentage: String)
+}
+
 final class FormView: UIView {
+    weak var delegate: FormViewDelegate?
+
     private lazy var keyboardToolBar: UIToolbar = {
         let leftSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let midSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let rightButton = UIBarButtonItem(barButtonSystemItem: .done,
                                           target: self,
-                                          action: #selector(doneButtonWasPressed))
+                                          action: #selector(doneBTWasPressed))
         let toolbar = UIToolbar(frame: .zero)
         toolbar.barStyle = .default
         toolbar.sizeToFit()
@@ -120,6 +126,7 @@ final class FormView: UIView {
         button.backgroundColor = #colorLiteral(red: 0.0, green: 0.8, blue: 0.4, alpha: 1)
         button.layer.cornerRadius = 20
         button.isEnabled = true
+        button.addTarget(self, action: #selector(simulateBTWasPressed), for: .touchUpInside)
         return button
     }()
 
@@ -137,13 +144,23 @@ final class FormView: UIView {
     }
 }
 
-// MARK: - Keyboard Toolbar Action
+// MARK: - Selectors
 extension FormView {
     @objc
-    private func doneButtonWasPressed() {
+    private func doneBTWasPressed() {
         investedValueTF.resignFirstResponder()
         investimentDueDateTF.resignFirstResponder()
         cdiPercentageTF.resignFirstResponder()
+    }
+
+    @objc
+    private func simulateBTWasPressed() {
+        let investedValue = investedValueTF.text ?? ""
+        let investimentDueDate = investimentDueDateTF.text ?? ""
+        let cdiPercentage = cdiPercentageTF.text ?? ""
+        delegate?.simulateWasPressed(investedValue: investedValue,
+                                     investimentDueDate: investimentDueDate,
+                                     cdiPercentage: cdiPercentage)
     }
 }
 

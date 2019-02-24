@@ -15,7 +15,8 @@ final class FormCoordinator: Coordinator {
     }
 
     func start() {
-        let formViewController = FormViewController()
+        let formViewModel = FormViewModel()
+        let formViewController = FormViewController(viewModel: formViewModel)
         navigationController.pushViewController(formViewController, animated: true)
     }
 }

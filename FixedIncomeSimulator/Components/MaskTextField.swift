@@ -13,7 +13,7 @@ enum MaskTextFieldStyle {
     case percentage
 }
 
-class MaskTextField: UITextField {
+final class MaskTextField: UITextField {
     private let maxCurrencyRange: Int = 11 //million house
     private let maxDateRange: Int = 10
     private let maxPercentageRange: Int = 3
