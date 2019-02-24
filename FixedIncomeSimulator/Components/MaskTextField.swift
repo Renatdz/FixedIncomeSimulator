@@ -16,7 +16,7 @@ enum MaskTextFieldStyle {
 final class MaskTextField: UITextField {
     private let maxCurrencyRange: Int = 11 //million house
     private let maxDateRange: Int = 10
-    private let maxPercentageRange: Int = 3
+    private let maxPercentageRange: Int = 4
     private let maskStyle: MaskTextFieldStyle
 
     init(placeholder: String, maskStyle: MaskTextFieldStyle, frame: CGRect = .zero) {
@@ -61,13 +61,13 @@ private extension MaskTextField {
     func currency(_ textField: UITextField,
                   shouldChangeCharactersIn range: NSRange,
                   replacementString string: String) -> Bool {
-        let text: NSString = (textField.text ?? "") as NSString
+        let text: String = (textField.text ?? "")
 
-        if text.length >= maxCurrencyRange && string != "" {
+        if text.count >= maxCurrencyRange && string != "" {
             return false
         }
 
-        let finalString = text.replacingCharacters(in: range, with: string)
+        let finalString = (text as NSString).replacingCharacters(in: range, with: string)
 
         if finalString == "R$ " {
             textField.text = ""
@@ -99,7 +99,7 @@ private extension MaskTextField {
 
         var finalString = (text as NSString).replacingCharacters(in: range, with: string)
 
-        if textField.text?.count == 1 || textField.text?.count == 4 {
+        if text.count == 1 || text.count == 4 {
             if !(string == "") {
                 finalString += "/"
             }
@@ -131,8 +131,15 @@ private extension MaskTextField {
 
         var finalString = (text as NSString).replacingCharacters(in: range, with: string)
 
-        if textField.text?.count == 1 {
+        if text.count == 1 || text.count == 2 {
             if !(string == "") {
+                finalString += "%"
+            }
+        }
+
+        if text.count == 3 && text.contains("%") {
+            if !(string == "") {
+                finalString = finalString.replacingOccurrences(of: "%", with: "")
                 finalString += "%"
             }
         }
