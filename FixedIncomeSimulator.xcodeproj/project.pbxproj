@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		73CF7BF0AF52C8CF70233B72 /* Pods_FixedIncomeSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */; };
+		A50FC2A622233D1A00E8A110 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2A522233D1A00E8A110 /* Simulation.swift */; };
+		A50FC2A822233E6E00E8A110 /* InvestmentParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2A722233E6E00E8A110 /* InvestmentParameter.swift */; };
+		A50FC2AA2223477C00E8A110 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2A92223477C00E8A110 /* Double+Extension.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		3C42C246EA9CF56D9E46DC32 /* Pods-FixedIncomeSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.debug.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.debug.xcconfig"; sourceTree = "<group>"; };
 		9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50FC2A522233D1A00E8A110 /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		A50FC2A722233E6E00E8A110 /* InvestmentParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentParameter.swift; sourceTree = "<group>"; };
+		A50FC2A92223477C00E8A110 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A50FC2A422233CAE00E8A110 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2A522233D1A00E8A110 /* Simulation.swift */,
+				A50FC2A722233E6E00E8A110 /* InvestmentParameter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A569AA6D222073FF00CFF5A7 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +160,7 @@
 				A569AA79222073FF00CFF5A7 /* AppDelegate.swift */,
 				A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */,
 				A569AAA922207CD800CFF5A7 /* Features */,
+				A50FC2A422233CAE00E8A110 /* Models */,
 				A5E93EF42221CE4D00EE3F9D /* Components */,
 				A569AAA72220767300CFF5A7 /* Resources */,
 				A569AAB3222084E000CFF5A7 /* Utils */,
@@ -204,6 +220,7 @@
 				A569AAB62220854000CFF5A7 /* NSLayoutConstraint+Util.swift */,
 				A5E93EF72221ED8400EE3F9D /* String+Extension.swift */,
 				A5E93EF92223076600EE3F9D /* FormError.swift */,
+				A50FC2A92223477C00E8A110 /* Double+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -425,9 +442,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50FC2A622233D1A00E8A110 /* Simulation.swift in Sources */,
 				A569AAAE22207EB600CFF5A7 /* FormCoordinator.swift in Sources */,
+				A50FC2AA2223477C00E8A110 /* Double+Extension.swift in Sources */,
 				A5E93F012223198B00EE3F9D /* ResultViewModel.swift in Sources */,
 				A569AAB5222084F600CFF5A7 /* CodableView.swift in Sources */,
+				A50FC2A822233E6E00E8A110 /* InvestmentParameter.swift in Sources */,
 				A569AAAC22207E4D00CFF5A7 /* AppCoordinator.swift in Sources */,
 				A569AAB22220843600CFF5A7 /* FormView.swift in Sources */,
 				A5E93F0522231AF100EE3F9D /* ResultViewController.swift in Sources */,

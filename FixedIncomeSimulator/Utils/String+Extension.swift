@@ -28,4 +28,12 @@ extension String {
 
         return self
     }
+
+    var brazilianDateFormat: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let date = dateFormatter.date(from: self)
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: date ?? Date())
+    }
 }
