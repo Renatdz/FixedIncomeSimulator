@@ -9,9 +9,11 @@ import UIKit
 
 final class ResultViewController: UIViewController {
     private let resultViewModel: ResultViewModel
+    private let resultView: ResultView
 
     init(viewModel: ResultViewModel) {
         resultViewModel = viewModel
+        resultView = ResultView()
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -23,8 +25,13 @@ final class ResultViewController: UIViewController {
 
 // MARK: - Lifecycle
 extension ResultViewController {
+    override func loadView() {
+        super.loadView()
+        view = resultView
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        resultView.binding(with: resultViewModel)
     }
 }
