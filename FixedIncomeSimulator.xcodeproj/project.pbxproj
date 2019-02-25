@@ -39,6 +39,9 @@
 		A50FC2EF22249ADD00E8A110 /* DescriptionLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2EE22249ADD00E8A110 /* DescriptionLabelTests.swift */; };
 		A50FC2F122249C5500E8A110 /* ErrorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F022249C5500E8A110 /* ErrorViewTests.swift */; };
 		A50FC2F322249E3000E8A110 /* MaskTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F222249E3000E8A110 /* MaskTextFieldTests.swift */; };
+		A50FC2F822249FF500E8A110 /* FormViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F722249FF500E8A110 /* FormViewTests.swift */; };
+		A50FC2FA2224A14900E8A110 /* FormViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */; };
+		A50FC2FC2224A3B200E8A110 /* FormViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2FB2224A3B200E8A110 /* FormViewControllerTests.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -103,6 +106,9 @@
 		A50FC2EE22249ADD00E8A110 /* DescriptionLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionLabelTests.swift; sourceTree = "<group>"; };
 		A50FC2F022249C5500E8A110 /* ErrorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewTests.swift; sourceTree = "<group>"; };
 		A50FC2F222249E3000E8A110 /* MaskTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskTextFieldTests.swift; sourceTree = "<group>"; };
+		A50FC2F722249FF500E8A110 /* FormViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewTests.swift; sourceTree = "<group>"; };
+		A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewDelegateMock.swift; sourceTree = "<group>"; };
+		A50FC2FB2224A3B200E8A110 /* FormViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewControllerTests.swift; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +249,7 @@
 				A50FC2D92224905C00E8A110 /* SimulationMock.swift */,
 				A50FC2DB2224915100E8A110 /* APIClientMock.swift */,
 				A50FC2DD222491AA00E8A110 /* ErrorHandlerMock.swift */,
+				A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -274,6 +281,23 @@
 				A50FC2F222249E3000E8A110 /* MaskTextFieldTests.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A50FC2F522249FBA00E8A110 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2F622249FC200E8A110 /* Form */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A50FC2F622249FC200E8A110 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2F722249FF500E8A110 /* FormViewTests.swift */,
+				A50FC2FB2224A3B200E8A110 /* FormViewControllerTests.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		A569AA6D222073FF00CFF5A7 = {
@@ -316,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				A569AA902220740100CFF5A7 /* Info.plist */,
+				A50FC2F522249FBA00E8A110 /* Features */,
 				A50FC2D422248F8A00E8A110 /* Network */,
 				A50FC2E9222496DA00E8A110 /* Components */,
 				A50FC2D82224904500E8A110 /* Mocks */,
@@ -665,10 +690,13 @@
 				A50FC2DA2224905C00E8A110 /* SimulationMock.swift in Sources */,
 				A50FC2E82224947000E8A110 /* ErrorHandlerTests.swift in Sources */,
 				A50FC2EB222496FE00E8A110 /* DefaultButtonTests.swift in Sources */,
+				A50FC2FA2224A14900E8A110 /* FormViewDelegateMock.swift in Sources */,
+				A50FC2F822249FF500E8A110 /* FormViewTests.swift in Sources */,
 				A50FC2ED2224991C00E8A110 /* DefaultStackViewTests.swift in Sources */,
 				A50FC2D722248FC800E8A110 /* ErrorHandlerAPIClientTests.swift in Sources */,
 				A50FC2DE222491AA00E8A110 /* ErrorHandlerMock.swift in Sources */,
 				A50FC2F122249C5500E8A110 /* ErrorViewTests.swift in Sources */,
+				A50FC2FC2224A3B200E8A110 /* FormViewControllerTests.swift in Sources */,
 				A50FC2F322249E3000E8A110 /* MaskTextFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -84,7 +84,7 @@ final class FormView: UIView {
         return view
     }()
 
-    private lazy var simulateBT: DefaultButton = {
+    private(set) lazy var simulateBT: DefaultButton = {
         let button = DefaultButton(title: "Simular")
         button.addTarget(self, action: #selector(simulateBTWasPressed), for: .touchUpInside)
         return button
@@ -96,7 +96,7 @@ final class FormView: UIView {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
