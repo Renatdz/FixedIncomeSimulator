@@ -10,6 +10,8 @@ protocol ResultViewModelDelegate: class {
 }
 
 final class ResultViewModel {
+    weak var delegate: ResultViewModelDelegate?
+
     private(set) var investedAmount: String
     private(set) var grossAmount: String
     private(set) var grossAmountProfit: String
@@ -22,7 +24,7 @@ final class ResultViewModel {
     private(set) var yearlyInterestRate: String
     private(set) var periodRateProfit: String
 
-    init(simulation: Simulation) {
+    init(simulation: Simulation, delegate: ResultViewModelDelegate) {
         investedAmount = simulation.investmentParameter.investedAmount.currency
         grossAmount = simulation.grossAmount.currency
         grossAmountProfit = simulation.grossAmountProfit.currency
@@ -34,5 +36,11 @@ final class ResultViewModel {
         cdiPercentage = simulation.investmentParameter.rate.percentage
         yearlyInterestRate = simulation.investmentParameter.yearlyInterestRate.percentage
         periodRateProfit = simulation.rateProfit.percentage
+
+        self.delegate = delegate
+    }
+
+    func showForm() {
+        delegate?.showForm()
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 final class FormCoordinator: Coordinator {
     var navigationController: UINavigationController
+    private var childCoordinator: Coordinator?
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -45,5 +46,6 @@ extension FormCoordinator: FormViewModelDelegate {
                                     annualNetRateProfit: 74.17)
         let resultCoordinator = ResultCoordinator(simulation: simulation, navigationController: navigationController)
         resultCoordinator.start()
+        childCoordinator = resultCoordinator
     }
 }

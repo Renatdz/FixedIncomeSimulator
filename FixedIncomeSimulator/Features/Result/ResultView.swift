@@ -7,17 +7,17 @@
 
 import UIKit
 
-final class ResultView: UIView {
-    // MARK: - UI Components
-    private lazy var contentStackView: UIStackView = {
-        let stackView = UIStackView(frame: .zero)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fill
-        stackView.axis = .vertical
-        stackView.spacing = 30
-        return stackView
-    }()
+protocol ResultViewDelegate: class {
+    func simulateAgainWasPressed()
+}
 
+final class ResultView: UIView {
+    weak var delegate: ResultViewDelegate?
+
+    // MARK: - UI Components
+    private lazy var contentStackView: DefaultStackView = DefaultStackView(
+        distribution: .fill, axis: .vertical, spacing: 30
+    )
     private lazy var headerView: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -118,15 +118,9 @@ final class ResultView: UIView {
     )
     private let periodRateProfitLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
 
-    private lazy var simulateAgainBT: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Simular novamente", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.textAlignment = .center
-        button.backgroundColor = #colorLiteral(red: 0.0, green: 0.8, blue: 0.4, alpha: 1)
-        button.layer.cornerRadius = 20
-        button.isEnabled = true
+    private lazy var simulateAgainBT: DefaultButton = {
+        let button = DefaultButton(title: "Simular novamente")
+        button.addTarget(self, action: #selector(simulateAgainBTWasPressed), for: .touchUpInside)
         return button
     }()
 
@@ -159,6 +153,14 @@ extension ResultView {
         cdiPercentageLB.text = viewModel.cdiPercentage
         yearlyInterestRateLB.text = viewModel.yearlyInterestRate
         periodRateProfitLB.text = viewModel.periodRateProfit
+    }
+}
+
+// MARK: - Selectors
+extension ResultView {
+    @objc
+    private func simulateAgainBTWasPressed() {
+        delegate?.simulateAgainWasPressed()
     }
 }
 
@@ -255,7 +257,7 @@ extension ResultView: CodableView {
         setupYearlyInterestRateConstraints()
         setupPeriodRateProfitConstraints()
 
-        setupSimulateAgainBTConstraints()
+        simulateAgainBT.heightConstraint(constant: 50)
     }
 
     private func setupContentStackViewConstraints() {
@@ -280,8 +282,6 @@ extension ResultView: CodableView {
 
     private func setupSimulationGrossAmountProfitConstraints() {
         simulationGrossAmountProfitSV.overConstraint(topItem: simulationGrossAmountLB, constant: 10)
-//        simulationGrossAmountProfitSV.leftConstraint(parentView: headerView)
-//        simulationGrossAmountProfitSV.rightConstraint(parentView: headerView)
         simulationGrossAmountProfitSV.centerXConstraint(parentView: headerView)
         simulationGrossAmountProfitSV.bottomConstraint(parentView: headerView)
 
@@ -387,10 +387,6 @@ extension ResultView: CodableView {
 
         periodRateProfitDescriptionLB.heightConstraint(constant: 20)
         periodRateProfitLB.heightConstraint(constant: 20)
-    }
-
-    private func setupSimulateAgainBTConstraints() {
-        simulateAgainBT.heightConstraint(constant: 50)
     }
 
     func setup() {

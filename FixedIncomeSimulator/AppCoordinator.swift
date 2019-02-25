@@ -14,6 +14,7 @@ protocol Coordinator: class {
 }
 
 final class AppCoordinator {
+    private var currentCoordinator: Coordinator?
     private let navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
@@ -23,7 +24,7 @@ final class AppCoordinator {
     func start() -> UIViewController {
         let formCoordinator = FormCoordinator(navigationController: navigationController)
         formCoordinator.start()
-
+        currentCoordinator = formCoordinator
         return navigationController
     }
 }

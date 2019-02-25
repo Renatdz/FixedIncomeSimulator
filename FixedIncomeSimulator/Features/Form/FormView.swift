@@ -84,15 +84,8 @@ final class FormView: UIView {
         return view
     }()
 
-    private lazy var simulateBT: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Simular", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.textAlignment = .center
-        button.backgroundColor = #colorLiteral(red: 0.0, green: 0.8, blue: 0.4, alpha: 1)
-        button.layer.cornerRadius = 20
-        button.isEnabled = true
+    private lazy var simulateBT: DefaultButton = {
+        let button = DefaultButton(title: "Simular")
         button.addTarget(self, action: #selector(simulateBTWasPressed), for: .touchUpInside)
         return button
     }()

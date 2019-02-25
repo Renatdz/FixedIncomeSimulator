@@ -28,10 +28,17 @@ extension ResultViewController {
     override func loadView() {
         super.loadView()
         view = resultView
+        resultView.delegate = self
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         resultView.binding(with: resultViewModel)
+    }
+}
+
+extension ResultViewController: ResultViewDelegate {
+    func simulateAgainWasPressed() {
+        resultViewModel.showForm()
     }
 }

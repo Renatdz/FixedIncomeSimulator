@@ -31,7 +31,7 @@ final class FormViewModel {
         if !isValid(investedValue: investedValue,
                     investimentDueDate: investimentDueDate,
                     cdiPercentage: cdiPercentage) {
-            completion(FormError.invalidForm)
+            completion(FormError.invalidForm); return
         }
 
         // call service

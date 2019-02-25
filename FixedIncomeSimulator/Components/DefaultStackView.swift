@@ -8,11 +8,15 @@
 import UIKit
 
 final class DefaultStackView: UIStackView {
-    override init(frame: CGRect = .zero) {
+    init(distribution: Distribution = .fillProportionally,
+         axis: NSLayoutConstraint.Axis = .horizontal,
+         spacing: CGFloat = 0,
+         frame: CGRect = .zero) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.distribution = .fillProportionally
-        self.axis = .horizontal
+        self.distribution = distribution
+        self.axis = axis
+        self.spacing = spacing
     }
 
     required init(coder: NSCoder) {

@@ -9,7 +9,8 @@ import UIKit
 
 final class ResultCoordinator: Coordinator {
     var navigationController: UINavigationController
-    var simulation: Simulation
+    private var childCoordinator: Coordinator?
+    private var simulation: Simulation
 
     init(simulation: Simulation, navigationController: UINavigationController) {
         self.simulation = simulation
@@ -17,8 +18,16 @@ final class ResultCoordinator: Coordinator {
     }
 
     func start() {
-        let resultViewModel = ResultViewModel(simulation: simulation)
+        let resultViewModel = ResultViewModel(simulation: simulation, delegate: self)
         let resultViewController = ResultViewController(viewModel: resultViewModel)
         navigationController.pushViewController(resultViewController, animated: true)
+    }
+}
+
+extension ResultCoordinator: ResultViewModelDelegate {
+    func showForm() {
+        let formCoordinator = FormCoordinator(navigationController: navigationController)
+        formCoordinator.start()
+        childCoordinator = formCoordinator
     }
 }
