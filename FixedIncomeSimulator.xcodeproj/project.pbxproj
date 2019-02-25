@@ -34,6 +34,11 @@
 		A50FC2E42224935700E8A110 /* ServiceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2E32224935700E8A110 /* ServiceFactoryTests.swift */; };
 		A50FC2E6222493C600E8A110 /* FixedIncomeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2E5222493C600E8A110 /* FixedIncomeServiceTests.swift */; };
 		A50FC2E82224947000E8A110 /* ErrorHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2E72224947000E8A110 /* ErrorHandlerTests.swift */; };
+		A50FC2EB222496FE00E8A110 /* DefaultButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2EA222496FE00E8A110 /* DefaultButtonTests.swift */; };
+		A50FC2ED2224991C00E8A110 /* DefaultStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2EC2224991C00E8A110 /* DefaultStackViewTests.swift */; };
+		A50FC2EF22249ADD00E8A110 /* DescriptionLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2EE22249ADD00E8A110 /* DescriptionLabelTests.swift */; };
+		A50FC2F122249C5500E8A110 /* ErrorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F022249C5500E8A110 /* ErrorViewTests.swift */; };
+		A50FC2F322249E3000E8A110 /* MaskTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F222249E3000E8A110 /* MaskTextFieldTests.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -93,6 +98,11 @@
 		A50FC2E32224935700E8A110 /* ServiceFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactoryTests.swift; sourceTree = "<group>"; };
 		A50FC2E5222493C600E8A110 /* FixedIncomeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeServiceTests.swift; sourceTree = "<group>"; };
 		A50FC2E72224947000E8A110 /* ErrorHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerTests.swift; sourceTree = "<group>"; };
+		A50FC2EA222496FE00E8A110 /* DefaultButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonTests.swift; sourceTree = "<group>"; };
+		A50FC2EC2224991C00E8A110 /* DefaultStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStackViewTests.swift; sourceTree = "<group>"; };
+		A50FC2EE22249ADD00E8A110 /* DescriptionLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionLabelTests.swift; sourceTree = "<group>"; };
+		A50FC2F022249C5500E8A110 /* ErrorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewTests.swift; sourceTree = "<group>"; };
+		A50FC2F222249E3000E8A110 /* MaskTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskTextFieldTests.swift; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +264,18 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A50FC2E9222496DA00E8A110 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2EA222496FE00E8A110 /* DefaultButtonTests.swift */,
+				A50FC2EC2224991C00E8A110 /* DefaultStackViewTests.swift */,
+				A50FC2EE22249ADD00E8A110 /* DescriptionLabelTests.swift */,
+				A50FC2F022249C5500E8A110 /* ErrorViewTests.swift */,
+				A50FC2F222249E3000E8A110 /* MaskTextFieldTests.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A569AA6D222073FF00CFF5A7 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +317,7 @@
 			children = (
 				A569AA902220740100CFF5A7 /* Info.plist */,
 				A50FC2D422248F8A00E8A110 /* Network */,
+				A50FC2E9222496DA00E8A110 /* Components */,
 				A50FC2D82224904500E8A110 /* Mocks */,
 			);
 			path = FixedIncomeSimulatorTests;
@@ -636,12 +659,17 @@
 			files = (
 				A50FC2DC2224915100E8A110 /* APIClientMock.swift in Sources */,
 				A50FC2E6222493C600E8A110 /* FixedIncomeServiceTests.swift in Sources */,
+				A50FC2EF22249ADD00E8A110 /* DescriptionLabelTests.swift in Sources */,
 				A50FC2E12224926700E8A110 /* SimulateEndpoint.swift in Sources */,
 				A50FC2E42224935700E8A110 /* ServiceFactoryTests.swift in Sources */,
 				A50FC2DA2224905C00E8A110 /* SimulationMock.swift in Sources */,
 				A50FC2E82224947000E8A110 /* ErrorHandlerTests.swift in Sources */,
+				A50FC2EB222496FE00E8A110 /* DefaultButtonTests.swift in Sources */,
+				A50FC2ED2224991C00E8A110 /* DefaultStackViewTests.swift in Sources */,
 				A50FC2D722248FC800E8A110 /* ErrorHandlerAPIClientTests.swift in Sources */,
 				A50FC2DE222491AA00E8A110 /* ErrorHandlerMock.swift in Sources */,
+				A50FC2F122249C5500E8A110 /* ErrorViewTests.swift in Sources */,
+				A50FC2F322249E3000E8A110 /* MaskTextFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

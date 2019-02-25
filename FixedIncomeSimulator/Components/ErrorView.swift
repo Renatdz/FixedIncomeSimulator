@@ -22,7 +22,6 @@ class ErrorView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.alpha = 0
         return label
     }()
 
@@ -33,7 +32,7 @@ class ErrorView: UIView {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 }
 
@@ -41,6 +40,7 @@ class ErrorView: UIView {
 extension ErrorView {
     func show(in controller: UIViewController) {
         frame = CGRect(x: 0, y: -80, width: controller.view.frame.width, height: 80)
+        messageLB.alpha = 0
         controller.view.addSubview(self)
 
         showError(in: controller)
