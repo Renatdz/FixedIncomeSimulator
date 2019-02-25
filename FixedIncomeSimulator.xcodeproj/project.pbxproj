@@ -26,6 +26,14 @@
 		A50FC2CF2224768800E8A110 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2CE2224768800E8A110 /* ServiceFactory.swift */; };
 		A50FC2D1222476DF00E8A110 /* FixedIncomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2D0222476DF00E8A110 /* FixedIncomeService.swift */; };
 		A50FC2D32224788400E8A110 /* SimulateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2D22224788400E8A110 /* SimulateEndpoint.swift */; };
+		A50FC2D722248FC800E8A110 /* ErrorHandlerAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2D622248FC800E8A110 /* ErrorHandlerAPIClientTests.swift */; };
+		A50FC2DA2224905C00E8A110 /* SimulationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2D92224905C00E8A110 /* SimulationMock.swift */; };
+		A50FC2DC2224915100E8A110 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2DB2224915100E8A110 /* APIClientMock.swift */; };
+		A50FC2DE222491AA00E8A110 /* ErrorHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2DD222491AA00E8A110 /* ErrorHandlerMock.swift */; };
+		A50FC2E12224926700E8A110 /* SimulateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2E02224926700E8A110 /* SimulateEndpoint.swift */; };
+		A50FC2E42224935700E8A110 /* ServiceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2E32224935700E8A110 /* ServiceFactoryTests.swift */; };
+		A50FC2E6222493C600E8A110 /* FixedIncomeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2E5222493C600E8A110 /* FixedIncomeServiceTests.swift */; };
+		A50FC2E82224947000E8A110 /* ErrorHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2E72224947000E8A110 /* ErrorHandlerTests.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -48,13 +56,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		A569AA8B2220740100CFF5A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A569AA6E222073FF00CFF5A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A569AA75222073FF00CFF5A7;
-			remoteInfo = FixedIncomeSimulator;
-		};
-		A569AA962220740100CFF5A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A569AA6E222073FF00CFF5A7 /* Project object */;
 			proxyType = 1;
@@ -84,6 +85,14 @@
 		A50FC2CE2224768800E8A110 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		A50FC2D0222476DF00E8A110 /* FixedIncomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeService.swift; sourceTree = "<group>"; };
 		A50FC2D22224788400E8A110 /* SimulateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateEndpoint.swift; sourceTree = "<group>"; };
+		A50FC2D622248FC800E8A110 /* ErrorHandlerAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerAPIClientTests.swift; sourceTree = "<group>"; };
+		A50FC2D92224905C00E8A110 /* SimulationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationMock.swift; sourceTree = "<group>"; };
+		A50FC2DB2224915100E8A110 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		A50FC2DD222491AA00E8A110 /* ErrorHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerMock.swift; sourceTree = "<group>"; };
+		A50FC2E02224926700E8A110 /* SimulateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateEndpoint.swift; sourceTree = "<group>"; };
+		A50FC2E32224935700E8A110 /* ServiceFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactoryTests.swift; sourceTree = "<group>"; };
+		A50FC2E5222493C600E8A110 /* FixedIncomeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeServiceTests.swift; sourceTree = "<group>"; };
+		A50FC2E72224947000E8A110 /* ErrorHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerTests.swift; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +101,6 @@
 		A569AA852220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569AA8A2220740100CFF5A7 /* FixedIncomeSimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixedIncomeSimulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA902220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A569AA952220740100CFF5A7 /* FixedIncomeSimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixedIncomeSimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A569AA9B2220740100CFF5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569AAAB22207E4D00CFF5A7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A569AAAD22207EB600CFF5A7 /* FormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinator.swift; sourceTree = "<group>"; };
 		A569AAB12220843600CFF5A7 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
@@ -127,13 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87E41E5F1B9D9FB3DB077A3 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A569AA922220740100CFF5A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,12 +208,57 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A50FC2D422248F8A00E8A110 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2D522248FAC00E8A110 /* APIClient */,
+				A50FC2DF2224925800E8A110 /* Endpoints */,
+				A50FC2E22224934A00E8A110 /* Services */,
+				A50FC2E72224947000E8A110 /* ErrorHandlerTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A50FC2D522248FAC00E8A110 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2D622248FC800E8A110 /* ErrorHandlerAPIClientTests.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		A50FC2D82224904500E8A110 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2D92224905C00E8A110 /* SimulationMock.swift */,
+				A50FC2DB2224915100E8A110 /* APIClientMock.swift */,
+				A50FC2DD222491AA00E8A110 /* ErrorHandlerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A50FC2DF2224925800E8A110 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2E02224926700E8A110 /* SimulateEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		A50FC2E22224934A00E8A110 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2E32224935700E8A110 /* ServiceFactoryTests.swift */,
+				A50FC2E5222493C600E8A110 /* FixedIncomeServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A569AA6D222073FF00CFF5A7 = {
 			isa = PBXGroup;
 			children = (
 				A569AA78222073FF00CFF5A7 /* FixedIncomeSimulator */,
 				A569AA8D2220740100CFF5A7 /* FixedIncomeSimulatorTests */,
-				A569AA982220740100CFF5A7 /* FixedIncomeSimulatorUITests */,
 				A569AA77222073FF00CFF5A7 /* Products */,
 				1A914ADECBC05A377223D442 /* Pods */,
 				3285119C448C7570182174D9 /* Frameworks */,
@@ -225,7 +270,6 @@
 			children = (
 				A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */,
 				A569AA8A2220740100CFF5A7 /* FixedIncomeSimulatorTests.xctest */,
-				A569AA952220740100CFF5A7 /* FixedIncomeSimulatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,16 +294,10 @@
 			isa = PBXGroup;
 			children = (
 				A569AA902220740100CFF5A7 /* Info.plist */,
+				A50FC2D422248F8A00E8A110 /* Network */,
+				A50FC2D82224904500E8A110 /* Mocks */,
 			);
 			path = FixedIncomeSimulatorTests;
-			sourceTree = "<group>";
-		};
-		A569AA982220740100CFF5A7 /* FixedIncomeSimulatorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A569AA9B2220740100CFF5A7 /* Info.plist */,
-			);
-			path = FixedIncomeSimulatorUITests;
 			sourceTree = "<group>";
 		};
 		A569AAA72220767300CFF5A7 /* Resources */ = {
@@ -372,24 +410,6 @@
 			productReference = A569AA8A2220740100CFF5A7 /* FixedIncomeSimulatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A569AA942220740100CFF5A7 /* FixedIncomeSimulatorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A569AAA42220740100CFF5A7 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulatorUITests" */;
-			buildPhases = (
-				A569AA912220740100CFF5A7 /* Sources */,
-				A569AA922220740100CFF5A7 /* Frameworks */,
-				A569AA932220740100CFF5A7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A569AA972220740100CFF5A7 /* PBXTargetDependency */,
-			);
-			name = FixedIncomeSimulatorUITests;
-			productName = FixedIncomeSimulatorUITests;
-			productReference = A569AA952220740100CFF5A7 /* FixedIncomeSimulatorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -405,10 +425,7 @@
 					};
 					A569AA892220740100CFF5A7 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = A569AA75222073FF00CFF5A7;
-					};
-					A569AA942220740100CFF5A7 = {
-						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = A569AA75222073FF00CFF5A7;
 					};
 				};
@@ -428,7 +445,6 @@
 			targets = (
 				A569AA75222073FF00CFF5A7 /* FixedIncomeSimulator */,
 				A569AA892220740100CFF5A7 /* FixedIncomeSimulatorTests */,
-				A569AA942220740100CFF5A7 /* FixedIncomeSimulatorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -444,13 +460,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A569AA882220740100CFF5A7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A569AA932220740100CFF5A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,13 +634,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A569AA912220740100CFF5A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A50FC2DC2224915100E8A110 /* APIClientMock.swift in Sources */,
+				A50FC2E6222493C600E8A110 /* FixedIncomeServiceTests.swift in Sources */,
+				A50FC2E12224926700E8A110 /* SimulateEndpoint.swift in Sources */,
+				A50FC2E42224935700E8A110 /* ServiceFactoryTests.swift in Sources */,
+				A50FC2DA2224905C00E8A110 /* SimulationMock.swift in Sources */,
+				A50FC2E82224947000E8A110 /* ErrorHandlerTests.swift in Sources */,
+				A50FC2D722248FC800E8A110 /* ErrorHandlerAPIClientTests.swift in Sources */,
+				A50FC2DE222491AA00E8A110 /* ErrorHandlerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,11 +652,6 @@
 			isa = PBXTargetDependency;
 			target = A569AA75222073FF00CFF5A7 /* FixedIncomeSimulator */;
 			targetProxy = A569AA8B2220740100CFF5A7 /* PBXContainerItemProxy */;
-		};
-		A569AA972220740100CFF5A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A569AA75222073FF00CFF5A7 /* FixedIncomeSimulator */;
-			targetProxy = A569AA962220740100CFF5A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -824,6 +829,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KWEMDK92F4;
 				INFOPLIST_FILE = FixedIncomeSimulatorTests/Info.plist;
@@ -834,6 +840,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rm.FixedIncomeSimulatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FixedIncomeSimulator.app/FixedIncomeSimulator";
@@ -846,6 +853,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KWEMDK92F4;
 				INFOPLIST_FILE = FixedIncomeSimulatorTests/Info.plist;
@@ -859,46 +867,6 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FixedIncomeSimulator.app/FixedIncomeSimulator";
-			};
-			name = Release;
-		};
-		A569AAA52220740100CFF5A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KWEMDK92F4;
-				INFOPLIST_FILE = FixedIncomeSimulatorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rm.FixedIncomeSimulatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FixedIncomeSimulator;
-			};
-			name = Debug;
-		};
-		A569AAA62220740100CFF5A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KWEMDK92F4;
-				INFOPLIST_FILE = FixedIncomeSimulatorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rm.FixedIncomeSimulatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FixedIncomeSimulator;
 			};
 			name = Release;
 		};
@@ -928,15 +896,6 @@
 			buildConfigurations = (
 				A569AAA22220740100CFF5A7 /* Debug */,
 				A569AAA32220740100CFF5A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A569AAA42220740100CFF5A7 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulatorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A569AAA52220740100CFF5A7 /* Debug */,
-				A569AAA62220740100CFF5A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -42,7 +42,6 @@ extension FormViewController: FormViewDelegate {
                                             let alertView = ErrorView(message: error.localizedDescription)
                                             alertView.show(in: self)
                                         }
-
         }
     }
 }
