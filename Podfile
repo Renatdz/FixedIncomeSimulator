@@ -6,4 +6,10 @@ target 'FixedIncomeSimulator' do
   pod 'SwiftLint'
   pod 'IQKeyboardManagerSwift'
   pod 'Reusable'
+
+  target 'FixedIncomeSimulatorTests' do
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Nimble-Snapshots'
+  end
 end

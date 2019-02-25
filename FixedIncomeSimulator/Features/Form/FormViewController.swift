@@ -37,9 +37,12 @@ extension FormViewController: FormViewDelegate {
     func simulateWasPressed(investedValue: String, investimentDueDate: String, cdiPercentage: String) {
         formViewModel.simulateIncome(investedValue: investedValue,
                                      investimentDueDate: investimentDueDate,
-                                     cdiPercentage: cdiPercentage) { error in
-                                        let alertView = ErrorView(message: error.localizedDescription)
-                                        alertView.show(in: self)
+                                     cdiPercentage: cdiPercentage) { [unowned self] error in
+                                        DispatchQueue.main.async {
+                                            let alertView = ErrorView(message: error.localizedDescription)
+                                            alertView.show(in: self)
+                                        }
+
         }
     }
 }

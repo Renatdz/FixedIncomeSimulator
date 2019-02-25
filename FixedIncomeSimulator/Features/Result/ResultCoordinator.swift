@@ -11,9 +11,11 @@ final class ResultCoordinator: Coordinator {
     var navigationController: UINavigationController
     private var childCoordinator: Coordinator?
     private var simulation: Simulation
+    private var service: FixedIncomeService
 
-    init(simulation: Simulation, navigationController: UINavigationController) {
+    init(simulation: Simulation, service: FixedIncomeService, navigationController: UINavigationController) {
         self.simulation = simulation
+        self.service = service
         self.navigationController = navigationController
     }
 
@@ -26,7 +28,7 @@ final class ResultCoordinator: Coordinator {
 
 extension ResultCoordinator: ResultViewModelDelegate {
     func showForm() {
-        let formCoordinator = FormCoordinator(navigationController: navigationController)
+        let formCoordinator = FormCoordinator(service: service, navigationController: navigationController)
         formCoordinator.start()
         childCoordinator = formCoordinator
     }

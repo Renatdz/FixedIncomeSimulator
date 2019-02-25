@@ -18,6 +18,14 @@
 		A50FC2B62224464F00E8A110 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2B52224464F00E8A110 /* ResultCell.swift */; };
 		A50FC2B82224477200E8A110 /* ResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2B72224477200E8A110 /* ResultCellViewModel.swift */; };
 		A50FC2BA22244CF100E8A110 /* ListResultDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2B922244CF100E8A110 /* ListResultDataSource.swift */; };
+		A50FC2C322246B3700E8A110 /* APIClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2C222246B3700E8A110 /* APIClientBuilder.swift */; };
+		A50FC2C522246B9F00E8A110 /* ErrorHandlerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2C422246B9F00E8A110 /* ErrorHandlerAPIClient.swift */; };
+		A50FC2C722246C2F00E8A110 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2C622246C2F00E8A110 /* ErrorHandler.swift */; };
+		A50FC2CA22246C7900E8A110 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2C922246C7900E8A110 /* Endpoint.swift */; };
+		A50FC2CC22246DA600E8A110 /* RequestAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2CB22246DA600E8A110 /* RequestAPIClient.swift */; };
+		A50FC2CF2224768800E8A110 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2CE2224768800E8A110 /* ServiceFactory.swift */; };
+		A50FC2D1222476DF00E8A110 /* FixedIncomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2D0222476DF00E8A110 /* FixedIncomeService.swift */; };
+		A50FC2D32224788400E8A110 /* SimulateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2D22224788400E8A110 /* SimulateEndpoint.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -30,11 +38,12 @@
 		A569AAB922208AC400CFF5A7 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AAB822208AC400CFF5A7 /* FormViewModel.swift */; };
 		A5E93EF62221CE5D00EE3F9D /* MaskTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93EF52221CE5D00EE3F9D /* MaskTextField.swift */; };
 		A5E93EF82221ED8400EE3F9D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93EF72221ED8400EE3F9D /* String+Extension.swift */; };
-		A5E93EFA2223076600EE3F9D /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93EF92223076600EE3F9D /* FormError.swift */; };
+		A5E93EFA2223076600EE3F9D /* Error+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93EF92223076600EE3F9D /* Error+Util.swift */; };
 		A5E93EFC22230C3600EE3F9D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93EFB22230C3600EE3F9D /* ErrorView.swift */; };
 		A5E93EFF2223184400EE3F9D /* ResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93EFE2223184400EE3F9D /* ResultCoordinator.swift */; };
 		A5E93F012223198B00EE3F9D /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F002223198B00EE3F9D /* ResultViewModel.swift */; };
 		A5E93F0522231AF100EE3F9D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F0422231AF100EE3F9D /* ResultViewController.swift */; };
+		F87E41E5F1B9D9FB3DB077A3 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1AEBD3EBB69278D003B713 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +76,14 @@
 		A50FC2B52224464F00E8A110 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		A50FC2B72224477200E8A110 /* ResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellViewModel.swift; sourceTree = "<group>"; };
 		A50FC2B922244CF100E8A110 /* ListResultDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultDataSource.swift; sourceTree = "<group>"; };
+		A50FC2C222246B3700E8A110 /* APIClientBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientBuilder.swift; sourceTree = "<group>"; };
+		A50FC2C422246B9F00E8A110 /* ErrorHandlerAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerAPIClient.swift; sourceTree = "<group>"; };
+		A50FC2C622246C2F00E8A110 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		A50FC2C922246C7900E8A110 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A50FC2CB22246DA600E8A110 /* RequestAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPIClient.swift; sourceTree = "<group>"; };
+		A50FC2CE2224768800E8A110 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		A50FC2D0222476DF00E8A110 /* FixedIncomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeService.swift; sourceTree = "<group>"; };
+		A50FC2D22224788400E8A110 /* SimulateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateEndpoint.swift; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -85,11 +102,14 @@
 		A569AAB822208AC400CFF5A7 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		A5E93EF52221CE5D00EE3F9D /* MaskTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskTextField.swift; sourceTree = "<group>"; };
 		A5E93EF72221ED8400EE3F9D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		A5E93EF92223076600EE3F9D /* FormError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormError.swift; sourceTree = "<group>"; };
+		A5E93EF92223076600EE3F9D /* Error+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Util.swift"; sourceTree = "<group>"; };
 		A5E93EFB22230C3600EE3F9D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A5E93EFE2223184400EE3F9D /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
 		A5E93F002223198B00EE3F9D /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		A5E93F0422231AF100EE3F9D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		AC1AEBD3EBB69278D003B713 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC74436661C0C368BC1CD322 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7C8C93E1DDA19133A67CE3D /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87E41E5F1B9D9FB3DB077A3 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +145,8 @@
 			children = (
 				3C42C246EA9CF56D9E46DC32 /* Pods-FixedIncomeSimulator.debug.xcconfig */,
 				F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */,
+				B7C8C93E1DDA19133A67CE3D /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */,
+				AC74436661C0C368BC1CD322 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -132,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */,
+				AC1AEBD3EBB69278D003B713 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,8 +172,40 @@
 		A50FC2BF222466DD00E8A110 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A50FC2C122246AFB00E8A110 /* APIClient */,
+				A50FC2C822246C5500E8A110 /* Endpoints */,
+				A50FC2CD2224767200E8A110 /* Services */,
+				A50FC2C622246C2F00E8A110 /* ErrorHandler.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A50FC2C122246AFB00E8A110 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2C222246B3700E8A110 /* APIClientBuilder.swift */,
+				A50FC2CB22246DA600E8A110 /* RequestAPIClient.swift */,
+				A50FC2C422246B9F00E8A110 /* ErrorHandlerAPIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		A50FC2C822246C5500E8A110 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2C922246C7900E8A110 /* Endpoint.swift */,
+				A50FC2D22224788400E8A110 /* SimulateEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		A50FC2CD2224767200E8A110 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC2CE2224768800E8A110 /* ServiceFactory.swift */,
+				A50FC2D0222476DF00E8A110 /* FixedIncomeService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A569AA6D222073FF00CFF5A7 = {
@@ -241,7 +297,7 @@
 				A569AAB4222084F600CFF5A7 /* CodableView.swift */,
 				A569AAB62220854000CFF5A7 /* NSLayoutConstraint+Util.swift */,
 				A5E93EF72221ED8400EE3F9D /* String+Extension.swift */,
-				A5E93EF92223076600EE3F9D /* FormError.swift */,
+				A5E93EF92223076600EE3F9D /* Error+Util.swift */,
 				A50FC2A92223477C00E8A110 /* Double+Extension.swift */,
 			);
 			path = Utils;
@@ -300,9 +356,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A569AAA12220740100CFF5A7 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulatorTests" */;
 			buildPhases = (
+				5A26981707710C22A063ACCB /* [CP] Check Pods Manifest.lock */,
 				A569AA862220740100CFF5A7 /* Sources */,
 				A569AA872220740100CFF5A7 /* Frameworks */,
 				A569AA882220740100CFF5A7 /* Resources */,
+				7D9B7EB86BF347BB7A8BA314 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -402,6 +460,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5A26981707710C22A063ACCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D9B7EB86BF347BB7A8BA314 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9A8BCC9A9F0FDB33272ECA8D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +586,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50FC2A622233D1A00E8A110 /* Simulation.swift in Sources */,
+				A50FC2CA22246C7900E8A110 /* Endpoint.swift in Sources */,
+				A50FC2C722246C2F00E8A110 /* ErrorHandler.swift in Sources */,
 				A569AAAE22207EB600CFF5A7 /* FormCoordinator.swift in Sources */,
 				A50FC2AA2223477C00E8A110 /* Double+Extension.swift in Sources */,
 				A50FC2AC2223525900E8A110 /* ResultView.swift in Sources */,
@@ -482,22 +596,28 @@
 				A50FC2A822233E6E00E8A110 /* InvestmentParameter.swift in Sources */,
 				A569AAAC22207E4D00CFF5A7 /* AppCoordinator.swift in Sources */,
 				A569AAB22220843600CFF5A7 /* FormView.swift in Sources */,
+				A50FC2CF2224768800E8A110 /* ServiceFactory.swift in Sources */,
 				A5E93F0522231AF100EE3F9D /* ResultViewController.swift in Sources */,
 				A569AAB72220854000CFF5A7 /* NSLayoutConstraint+Util.swift in Sources */,
 				A50FC2B62224464F00E8A110 /* ResultCell.swift in Sources */,
+				A50FC2D1222476DF00E8A110 /* FixedIncomeService.swift in Sources */,
 				A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */,
 				A5E93EF62221CE5D00EE3F9D /* MaskTextField.swift in Sources */,
 				A50FC2BA22244CF100E8A110 /* ListResultDataSource.swift in Sources */,
 				A5E93EFC22230C3600EE3F9D /* ErrorView.swift in Sources */,
 				A569AAB922208AC400CFF5A7 /* FormViewModel.swift in Sources */,
 				A5E93EF82221ED8400EE3F9D /* String+Extension.swift in Sources */,
-				A5E93EFA2223076600EE3F9D /* FormError.swift in Sources */,
+				A5E93EFA2223076600EE3F9D /* Error+Util.swift in Sources */,
+				A50FC2C522246B9F00E8A110 /* ErrorHandlerAPIClient.swift in Sources */,
+				A50FC2D32224788400E8A110 /* SimulateEndpoint.swift in Sources */,
 				A50FC2AE2223588700E8A110 /* DescriptionLabel.swift in Sources */,
 				A50FC2B022235BE800E8A110 /* DefaultStackView.swift in Sources */,
 				A50FC2B2222380AE00E8A110 /* DefaultButton.swift in Sources */,
 				A5E93EFF2223184400EE3F9D /* ResultCoordinator.swift in Sources */,
 				A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */,
 				A50FC2B82224477200E8A110 /* ResultCellViewModel.swift in Sources */,
+				A50FC2C322246B3700E8A110 /* APIClientBuilder.swift in Sources */,
+				A50FC2CC22246DA600E8A110 /* RequestAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +820,7 @@
 		};
 		A569AAA22220740100CFF5A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C8C93E1DDA19133A67CE3D /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -721,6 +842,7 @@
 		};
 		A569AAA32220740100CFF5A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC74436661C0C368BC1CD322 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
