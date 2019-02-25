@@ -13,6 +13,7 @@ protocol ResultViewDelegate: class {
 
 final class ResultView: UIView {
     weak var delegate: ResultViewDelegate?
+    private var listDataSource: ListResultDataSource
 
     // MARK: - UI Components
     private lazy var contentStackView: DefaultStackView = DefaultStackView(
@@ -40,83 +41,16 @@ final class ResultView: UIView {
         textColor: #colorLiteral(red: 0.0, green: 0.8, blue: 0.4, alpha: 1), textAlignment: .left
     )
 
-    private lazy var mainBodyView: UIView = {
-        let view = UIView(frame: .zero)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(cellType: ResultCell.self)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 20
+        tableView.separatorStyle = .none
+        tableView.dataSource = listDataSource
+        return tableView
     }()
-
-    private let investedAmountSV: DefaultStackView = DefaultStackView()
-    private let investedAmountDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Valor aplicado inicialmente", textAlignment: .left
-    )
-    private let investedAmountLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let grossAmountSV: DefaultStackView = DefaultStackView()
-    private let grossAmountDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Valor bruto do investimento", textAlignment: .left
-    )
-    private let grossAmountLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let grossAmountProfitSV: DefaultStackView = DefaultStackView()
-    private let grossAmountProfitDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Valor do rendimento", textAlignment: .left
-    )
-    private let grossAmountProfitLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let taxesAmountSV: DefaultStackView = DefaultStackView()
-    private let taxesAmountDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "IR sobre o investimento", textAlignment: .left
-    )
-    private let taxesAmountLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let netAmountSV: DefaultStackView = DefaultStackView()
-    private let netAmountDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Valor líquido do investimento", textAlignment: .left
-    )
-    private let netAmountLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private lazy var secondaryBodyView: UIView = {
-        let view = UIView(frame: .zero)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    private let maturityDateSV: DefaultStackView = DefaultStackView()
-    private let maturityDateDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Data de resgate", textAlignment: .left
-    )
-    private let maturityDateLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let maturityTotalDaysSV: DefaultStackView = DefaultStackView()
-    private let maturityTotalDaysDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Dias corridos", textAlignment: .left
-    )
-    private let maturityTotalDaysLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let monthlyGrossRateProfitSV: DefaultStackView = DefaultStackView()
-    private let monthlyGrossRateProfitDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Rendimento mensal", textAlignment: .left
-    )
-    private let monthlyGrossRateProfitLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let cdiPercentageSV: DefaultStackView = DefaultStackView()
-    private let cdiPercentageDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Percentual do CDI do investimento", textAlignment: .left
-    )
-    private let cdiPercentageLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let yearlyInterestRateSV: DefaultStackView = DefaultStackView()
-    private let yearlyInterestRateDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Rentabilidade anual", textAlignment: .left
-    )
-    private let yearlyInterestRateLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
-
-    private let periodRateProfitSV: DefaultStackView = DefaultStackView()
-    private let periodRateProfitDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Rentabilidade no período", textAlignment: .left
-    )
-    private let periodRateProfitLB: DescriptionLabel = DescriptionLabel(textColor: .black, textAlignment: .right)
 
     private lazy var simulateAgainBT: DefaultButton = {
         let button = DefaultButton(title: "Simular novamente")
@@ -125,7 +59,8 @@ final class ResultView: UIView {
     }()
 
     // MARK: - Inits
-    override init(frame: CGRect = .zero) {
+    init(dataSource: ListResultDataSource = ListResultDataSource(), frame: CGRect = .zero) {
+        listDataSource = dataSource
         super.init(frame: frame)
         buildCodableView()
     }
@@ -141,18 +76,12 @@ extension ResultView {
         simulationGrossAmountLB.text = viewModel.grossAmount
         simulationGrossAmountProfitLB.text = viewModel.grossAmountProfit
 
-        investedAmountLB.text = viewModel.investedAmount
-        grossAmountLB.text = viewModel.grossAmount
-        grossAmountProfitLB.text = viewModel.grossAmountProfit
-        taxesAmountLB.text = viewModel.taxesAmountWithPercentage
-        netAmountLB.text = viewModel.netAmount
+        let cellViewModels: [ResultCellViewModel] = viewModel.matrixValues.map {
+            ResultCellViewModel(description: $0.first, value: $0.last)
+        }
 
-        maturityDateLB.text = viewModel.maturityDate
-        maturityTotalDaysLB.text = viewModel.maturityTotalDays
-        monthlyGrossRateProfitLB.text = viewModel.monthlyGrossRateProfit
-        cdiPercentageLB.text = viewModel.cdiPercentage
-        yearlyInterestRateLB.text = viewModel.yearlyInterestRate
-        periodRateProfitLB.text = viewModel.periodRateProfit
+        listDataSource.set(cellViewModels)
+        tableView.reloadData()
     }
 }
 
@@ -169,8 +98,7 @@ extension ResultView: CodableView {
     func buildHierarchy() {
         addSubview(contentStackView)
         contentStackView.addArrangedSubview(headerView)
-        contentStackView.addArrangedSubview(mainBodyView)
-        contentStackView.addArrangedSubview(secondaryBodyView)
+        contentStackView.addArrangedSubview(tableView)
         contentStackView.addArrangedSubview(simulateAgainBT)
 
         headerView.addSubview(simulationResultDescriptionLB)
@@ -179,62 +107,6 @@ extension ResultView: CodableView {
 
         simulationGrossAmountProfitSV.addArrangedSubview(simulationGrossAmountProfitDescriptionLB)
         simulationGrossAmountProfitSV.addArrangedSubview(simulationGrossAmountProfitLB)
-
-        setupMainBodyViewSubviews()
-        setupSecondaryBodyViewSubviews()
-    }
-
-    private func setupMainBodyViewSubviews() {
-        mainBodyView.addSubview(investedAmountSV)
-        mainBodyView.addSubview(grossAmountSV)
-        mainBodyView.addSubview(grossAmountProfitSV)
-        mainBodyView.addSubview(taxesAmountSV)
-        mainBodyView.addSubview(netAmountSV)
-
-        investedAmountSV.addArrangedSubview(investedAmountDescriptionLB)
-        investedAmountSV.addArrangedSubview(investedAmountLB)
-
-        grossAmountSV.addArrangedSubview(grossAmountDescriptionLB)
-        grossAmountSV.addArrangedSubview(grossAmountLB)
-
-        grossAmountProfitSV.addArrangedSubview(grossAmountProfitDescriptionLB)
-        grossAmountProfitSV.addArrangedSubview(grossAmountProfitLB)
-
-        taxesAmountSV.addArrangedSubview(taxesAmountDescriptionLB)
-        taxesAmountSV.addArrangedSubview(taxesAmountLB)
-
-        netAmountSV.addArrangedSubview(netAmountDescriptionLB)
-        netAmountSV.addArrangedSubview(netAmountLB)
-    }
-
-    private func setupSecondaryBodyViewSubviews() {
-        secondaryBodyView.addSubview(maturityDateSV)
-        secondaryBodyView.addSubview(maturityTotalDaysSV)
-        secondaryBodyView.addSubview(monthlyGrossRateProfitSV)
-        secondaryBodyView.addSubview(cdiPercentageSV)
-        secondaryBodyView.addSubview(yearlyInterestRateSV)
-        secondaryBodyView.addSubview(periodRateProfitSV)
-
-        maturityDateSV.addArrangedSubview(maturityDateDescriptionLB)
-        maturityDateSV.addArrangedSubview(maturityDateLB)
-
-        maturityTotalDaysSV.addArrangedSubview(maturityTotalDaysDescriptionLB)
-        maturityTotalDaysSV.addArrangedSubview(maturityTotalDaysLB)
-
-        monthlyGrossRateProfitSV.addArrangedSubview(monthlyGrossRateProfitDescriptionLB)
-        monthlyGrossRateProfitSV.addArrangedSubview(monthlyGrossRateProfitLB)
-
-        cdiPercentageSV.addArrangedSubview(cdiPercentageDescriptionLB)
-        cdiPercentageSV.addArrangedSubview(cdiPercentageLB)
-
-        yearlyInterestRateSV.addArrangedSubview(yearlyInterestRateDescriptionLB)
-        yearlyInterestRateSV.addArrangedSubview(yearlyInterestRateLB)
-
-        yearlyInterestRateSV.addArrangedSubview(yearlyInterestRateDescriptionLB)
-        yearlyInterestRateSV.addArrangedSubview(yearlyInterestRateLB)
-
-        periodRateProfitSV.addArrangedSubview(periodRateProfitDescriptionLB)
-        periodRateProfitSV.addArrangedSubview(periodRateProfitLB)
     }
 
     func buildConstraints() {
@@ -243,19 +115,6 @@ extension ResultView: CodableView {
         setupSimulationResultDescriptionLBConstraints()
         setupSimulationGrossAmountLBConstraints()
         setupSimulationGrossAmountProfitConstraints()
-
-        setupInvestedAmountConstraints()
-        setupGrossAmountConstraints()
-        setupGrossAmountProfitConstraints()
-        setupTaxesAmountConstraints()
-        setupNetAmountConstraints()
-
-        setupMaturityDateConstraints()
-        setupMaturityTotalDaysConstraints()
-        setupMonthlyGrossRateProfitConstraints()
-        setupCdiPercentageConstraints()
-        setupYearlyInterestRateConstraints()
-        setupPeriodRateProfitConstraints()
 
         simulateAgainBT.heightConstraint(constant: 50)
     }
@@ -287,106 +146,6 @@ extension ResultView: CodableView {
 
         simulationGrossAmountProfitDescriptionLB.heightConstraint(constant: 20)
         simulationGrossAmountProfitLB.heightConstraint(constant: 20)
-    }
-
-    private func setupInvestedAmountConstraints() {
-        investedAmountSV.topConstraint(parentView: mainBodyView)
-        investedAmountSV.leftConstraint(parentView: mainBodyView)
-        investedAmountSV.rightConstraint(parentView: mainBodyView)
-
-        investedAmountDescriptionLB.heightConstraint(constant: 20)
-        investedAmountLB.heightConstraint(constant: 20)
-    }
-
-    private func setupGrossAmountConstraints() {
-        grossAmountSV.overConstraint(topItem: investedAmountSV, constant: 10)
-        grossAmountSV.leftConstraint(parentView: mainBodyView)
-        grossAmountSV.rightConstraint(parentView: mainBodyView)
-
-        grossAmountDescriptionLB.heightConstraint(constant: 20)
-        grossAmountLB.heightConstraint(constant: 20)
-    }
-
-    private func setupGrossAmountProfitConstraints() {
-        grossAmountProfitSV.overConstraint(topItem: grossAmountSV, constant: 10)
-        grossAmountProfitSV.leftConstraint(parentView: mainBodyView)
-        grossAmountProfitSV.rightConstraint(parentView: mainBodyView)
-
-        grossAmountProfitDescriptionLB.heightConstraint(constant: 20)
-        grossAmountProfitLB.heightConstraint(constant: 20)
-    }
-
-    private func setupTaxesAmountConstraints() {
-        taxesAmountSV.overConstraint(topItem: grossAmountProfitSV, constant: 10)
-        taxesAmountSV.leftConstraint(parentView: mainBodyView)
-        taxesAmountSV.rightConstraint(parentView: mainBodyView)
-
-        taxesAmountDescriptionLB.heightConstraint(constant: 20)
-        taxesAmountLB.heightConstraint(constant: 20)
-    }
-
-    private func setupNetAmountConstraints() {
-        netAmountSV.overConstraint(topItem: taxesAmountSV, constant: 10)
-        netAmountSV.leftConstraint(parentView: mainBodyView)
-        netAmountSV.rightConstraint(parentView: mainBodyView)
-        netAmountSV.bottomConstraint(parentView: mainBodyView)
-
-        netAmountDescriptionLB.heightConstraint(constant: 20)
-        netAmountLB.heightConstraint(constant: 20)
-    }
-
-    private func setupMaturityDateConstraints() {
-        maturityDateSV.topConstraint(parentView: secondaryBodyView)
-        maturityDateSV.leftConstraint(parentView: secondaryBodyView)
-        maturityDateSV.rightConstraint(parentView: secondaryBodyView)
-
-        maturityDateDescriptionLB.heightConstraint(constant: 20)
-        maturityDateLB.heightConstraint(constant: 20)
-    }
-
-    private func setupMaturityTotalDaysConstraints() {
-        maturityTotalDaysSV.overConstraint(topItem: maturityDateSV, constant: 10)
-        maturityTotalDaysSV.leftConstraint(parentView: secondaryBodyView)
-        maturityTotalDaysSV.rightConstraint(parentView: secondaryBodyView)
-
-        maturityTotalDaysDescriptionLB.heightConstraint(constant: 20)
-        maturityTotalDaysLB.heightConstraint(constant: 20)
-    }
-
-    private func setupMonthlyGrossRateProfitConstraints() {
-        monthlyGrossRateProfitSV.overConstraint(topItem: maturityTotalDaysSV, constant: 10)
-        monthlyGrossRateProfitSV.leftConstraint(parentView: secondaryBodyView)
-        monthlyGrossRateProfitSV.rightConstraint(parentView: secondaryBodyView)
-
-        monthlyGrossRateProfitDescriptionLB.heightConstraint(constant: 20)
-        monthlyGrossRateProfitLB.heightConstraint(constant: 20)
-    }
-
-    private func setupCdiPercentageConstraints() {
-        cdiPercentageSV.overConstraint(topItem: monthlyGrossRateProfitSV, constant: 10)
-        cdiPercentageSV.leftConstraint(parentView: secondaryBodyView)
-        cdiPercentageSV.rightConstraint(parentView: secondaryBodyView)
-
-        cdiPercentageDescriptionLB.heightConstraint(constant: 20)
-        cdiPercentageLB.heightConstraint(constant: 20)
-    }
-
-    private func setupYearlyInterestRateConstraints() {
-        yearlyInterestRateSV.overConstraint(topItem: cdiPercentageSV, constant: 10)
-        yearlyInterestRateSV.leftConstraint(parentView: secondaryBodyView)
-        yearlyInterestRateSV.rightConstraint(parentView: secondaryBodyView)
-
-        yearlyInterestRateDescriptionLB.heightConstraint(constant: 20)
-        yearlyInterestRateLB.heightConstraint(constant: 20)
-    }
-
-    private func setupPeriodRateProfitConstraints() {
-        periodRateProfitSV.overConstraint(topItem: yearlyInterestRateSV, constant: 10)
-        periodRateProfitSV.leftConstraint(parentView: secondaryBodyView)
-        periodRateProfitSV.rightConstraint(parentView: secondaryBodyView)
-
-        periodRateProfitDescriptionLB.heightConstraint(constant: 20)
-        periodRateProfitLB.heightConstraint(constant: 20)
     }
 
     func setup() {

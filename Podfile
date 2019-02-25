@@ -5,4 +5,5 @@ target 'FixedIncomeSimulator' do
 
   pod 'SwiftLint'
   pod 'IQKeyboardManagerSwift'
+  pod 'Reusable'
 end
