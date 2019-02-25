@@ -41,6 +41,7 @@ extension ResultCell: CodableView {
     }
 
     func setup() {
+        selectionStyle = .none
         backgroundColor = .white
     }
 }

@@ -16,30 +16,35 @@ final class ResultView: UIView {
     private var listDataSource: ListResultDataSource
 
     // MARK: - UI Components
-    private lazy var contentStackView: DefaultStackView = DefaultStackView(
-        distribution: .fill, axis: .vertical, spacing: 30
-    )
+    private lazy var contentStackView: DefaultStackView = {
+        return DefaultStackView(distribution: .fill, axis: .vertical, spacing: 30)
+    }()
+
     private lazy var headerView: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private let simulationResultDescriptionLB: DescriptionLabel = DescriptionLabel(text: "Resultado da simulação")
-    private let simulationGrossAmountLB: DescriptionLabel = DescriptionLabel(
-        textColor: .black, font: .systemFont(ofSize: 40, weight: .regular)
-    )
-    private let simulationGrossAmountProfitSV: DefaultStackView = {
+    private let headerResultDescriptionLB: DescriptionLabel = DescriptionLabel(text: "Resultado da simulação")
+
+    private let headerGrossAmountLB: DescriptionLabel = {
+        return DescriptionLabel(textColor: .black, font: .systemFont(ofSize: 40, weight: .regular))
+    }()
+
+    private let headerGrossAmountProfitSV: DefaultStackView = {
         let stackView = DefaultStackView()
         stackView.alignment = .center
         return stackView
     }()
-    private let simulationGrossAmountProfitDescriptionLB: DescriptionLabel = DescriptionLabel(
-        text: "Rendimento total de ", textAlignment: .left
-    )
-    private let simulationGrossAmountProfitLB: DescriptionLabel = DescriptionLabel(
-        textColor: #colorLiteral(red: 0.0, green: 0.8, blue: 0.4, alpha: 1), textAlignment: .left
-    )
+
+    private let headerGrossAmountProfitDescriptionLB: DescriptionLabel = {
+        return DescriptionLabel(text: "Rendimento total de ", textAlignment: .left)
+    }()
+
+    private let headerGrossAmountProfitLB: DescriptionLabel = {
+        return DescriptionLabel(textColor: #colorLiteral(red: 0.0, green: 0.8, blue: 0.4, alpha: 1), textAlignment: .left)
+    }()
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -48,6 +53,7 @@ final class ResultView: UIView {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 20
         tableView.separatorStyle = .none
+        tableView.isScrollEnabled = false
         tableView.dataSource = listDataSource
         return tableView
     }()
@@ -73,8 +79,8 @@ final class ResultView: UIView {
 // MARK: - Binding
 extension ResultView {
     func binding(with viewModel: ResultViewModel) {
-        simulationGrossAmountLB.text = viewModel.grossAmount
-        simulationGrossAmountProfitLB.text = viewModel.grossAmountProfit
+        headerGrossAmountLB.text = viewModel.grossAmount
+        headerGrossAmountProfitLB.text = viewModel.grossAmountProfit
 
         let cellViewModels: [ResultCellViewModel] = viewModel.matrixValues.map {
             ResultCellViewModel(description: $0.first, value: $0.last)
@@ -101,20 +107,20 @@ extension ResultView: CodableView {
         contentStackView.addArrangedSubview(tableView)
         contentStackView.addArrangedSubview(simulateAgainBT)
 
-        headerView.addSubview(simulationResultDescriptionLB)
-        headerView.addSubview(simulationGrossAmountLB)
-        headerView.addSubview(simulationGrossAmountProfitSV)
+        headerView.addSubview(headerResultDescriptionLB)
+        headerView.addSubview(headerGrossAmountLB)
+        headerView.addSubview(headerGrossAmountProfitSV)
 
-        simulationGrossAmountProfitSV.addArrangedSubview(simulationGrossAmountProfitDescriptionLB)
-        simulationGrossAmountProfitSV.addArrangedSubview(simulationGrossAmountProfitLB)
+        headerGrossAmountProfitSV.addArrangedSubview(headerGrossAmountProfitDescriptionLB)
+        headerGrossAmountProfitSV.addArrangedSubview(headerGrossAmountProfitLB)
     }
 
     func buildConstraints() {
         setupContentStackViewConstraints()
 
-        setupSimulationResultDescriptionLBConstraints()
-        setupSimulationGrossAmountLBConstraints()
-        setupSimulationGrossAmountProfitConstraints()
+        setupHeaderResultDescriptionLBConstraints()
+        setupHeaderGrossAmountLBConstraints()
+        setupHeaderGrossAmountProfitConstraints()
 
         simulateAgainBT.heightConstraint(constant: 50)
     }
@@ -126,26 +132,26 @@ extension ResultView: CodableView {
         contentStackView.safeAreaBottom(safeAreaView: self, constant: 20)
     }
 
-    private func setupSimulationResultDescriptionLBConstraints() {
-        simulationResultDescriptionLB.topConstraint(parentView: headerView)
-        simulationResultDescriptionLB.leftConstraint(parentView: headerView)
-        simulationResultDescriptionLB.rightConstraint(parentView: headerView)
-        simulationResultDescriptionLB.heightConstraint(constant: 20)
+    private func setupHeaderResultDescriptionLBConstraints() {
+        headerResultDescriptionLB.topConstraint(parentView: headerView)
+        headerResultDescriptionLB.leftConstraint(parentView: headerView)
+        headerResultDescriptionLB.rightConstraint(parentView: headerView)
+        headerResultDescriptionLB.heightConstraint(constant: 20)
     }
 
-    private func setupSimulationGrossAmountLBConstraints() {
-        simulationGrossAmountLB.overConstraint(topItem: simulationResultDescriptionLB, constant: 10)
-        simulationGrossAmountLB.leftConstraint(parentView: headerView)
-        simulationGrossAmountLB.rightConstraint(parentView: headerView)
+    private func setupHeaderGrossAmountLBConstraints() {
+        headerGrossAmountLB.overConstraint(topItem: headerResultDescriptionLB, constant: 10)
+        headerGrossAmountLB.leftConstraint(parentView: headerView)
+        headerGrossAmountLB.rightConstraint(parentView: headerView)
     }
 
-    private func setupSimulationGrossAmountProfitConstraints() {
-        simulationGrossAmountProfitSV.overConstraint(topItem: simulationGrossAmountLB, constant: 10)
-        simulationGrossAmountProfitSV.centerXConstraint(parentView: headerView)
-        simulationGrossAmountProfitSV.bottomConstraint(parentView: headerView)
+    private func setupHeaderGrossAmountProfitConstraints() {
+        headerGrossAmountProfitSV.overConstraint(topItem: headerGrossAmountLB, constant: 10)
+        headerGrossAmountProfitSV.centerXConstraint(parentView: headerView)
+        headerGrossAmountProfitSV.bottomConstraint(parentView: headerView)
 
-        simulationGrossAmountProfitDescriptionLB.heightConstraint(constant: 20)
-        simulationGrossAmountProfitLB.heightConstraint(constant: 20)
+        headerGrossAmountProfitDescriptionLB.heightConstraint(constant: 20)
+        headerGrossAmountProfitLB.heightConstraint(constant: 20)
     }
 
     func setup() {
