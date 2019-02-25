@@ -33,23 +33,12 @@ final class FormView: UIView {
         return view
     }()
 
-    private lazy var investedValueDescriptionLB: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Quanto você gostaria de aplicar?*"
-        label.textColor = .gray
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        return label
-    }()
+    private lazy var investedValueDescriptionLB: DescriptionLabel = DescriptionLabel(
+        text: "Quanto você gostaria de aplicar?*"
+    )
 
     private lazy var investedValueTF: MaskTextField = {
         let textField = MaskTextField(placeholder: "R$", maskStyle: .currency)
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textColor = .black
-        textField.textAlignment = .center
-        textField.font = UIFont.systemFont(ofSize: 30, weight: .medium)
-        textField.keyboardType = .decimalPad
         textField.inputAccessoryView = keyboardToolBar
         return textField
     }()
@@ -61,23 +50,12 @@ final class FormView: UIView {
         return view
     }()
 
-    private lazy var investimentDueDateDescriptionLB: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Qual a data de vencimento do investimento?*"
-        label.textColor = .gray
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        return label
-    }()
+    private lazy var investimentDueDateDescriptionLB: DescriptionLabel = DescriptionLabel(
+        text: "Qual a data de vencimento do investimento?*"
+    )
 
     private lazy var investimentDueDateTF: MaskTextField = {
         let textField = MaskTextField(placeholder: "dia/mês/ano", maskStyle: .date)
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textColor = .black
-        textField.textAlignment = .center
-        textField.font = UIFont.systemFont(ofSize: 30, weight: .medium)
-        textField.keyboardType = .decimalPad
         textField.inputAccessoryView = keyboardToolBar
         return textField
     }()
@@ -89,23 +67,12 @@ final class FormView: UIView {
         return view
     }()
 
-    private lazy var cdiPercentageDescriptionLB: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Qual o percentual do CDI do investimento?*"
-        label.textColor = .gray
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        return label
-    }()
+    private lazy var cdiPercentageDescriptionLB: DescriptionLabel = DescriptionLabel(
+        text: "Qual o percentual do CDI do investimento?*"
+    )
 
     private lazy var cdiPercentageTF: MaskTextField = {
         let textField = MaskTextField(placeholder: "100%", maskStyle: .percentage)
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textColor = .black
-        textField.textAlignment = .center
-        textField.font = UIFont.systemFont(ofSize: 30, weight: .medium)
-        textField.keyboardType = .decimalPad
         textField.inputAccessoryView = keyboardToolBar
         return textField
     }()

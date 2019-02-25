@@ -25,11 +25,23 @@ final class MaskTextField: UITextField {
         super.init(frame: frame)
 
         self.placeholder = placeholder
-        self.delegate = self
+
+        delegate = self
+        setupUI()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+private extension MaskTextField {
+    func setupUI() {
+        translatesAutoresizingMaskIntoConstraints = false
+        textColor = .black
+        textAlignment = .center
+        font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        keyboardType = .decimalPad
     }
 }
 

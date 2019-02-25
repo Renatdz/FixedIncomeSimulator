@@ -23,7 +23,7 @@ final class AppCoordinator {
     func start() -> UIViewController {
         let formCoordinator = FormCoordinator(navigationController: navigationController)
         formCoordinator.start()
-        
+
         return navigationController
     }
 }
