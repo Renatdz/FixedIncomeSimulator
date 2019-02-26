@@ -20,7 +20,7 @@ final class AppCoordinator {
         navigationController.isNavigationBarHidden = true
         return navigationController
     }()
-    private let baseURL: String = "http://localhost"
+    private let baseURL: String = "https://api-simulator-calc.easynvest.com.br"
 
     private lazy var apiClient: APIClient = APIClientBuilder(baseURL: baseURL)
         .withErrorHandler()

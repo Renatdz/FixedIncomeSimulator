@@ -10,14 +10,14 @@ import UIKit
 final class FormViewController: UIViewController {
     private let formViewModel: FormViewModel
     private let formView: FormView
-
+    
     init(viewModel: FormViewModel) {
         formViewModel = viewModel
         formView = FormView()
-
+        
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
@@ -38,10 +38,8 @@ extension FormViewController: FormViewDelegate {
         formViewModel.simulateIncome(investedValue: investedValue,
                                      investimentDueDate: investimentDueDate,
                                      cdiPercentage: cdiPercentage) { [unowned self] error in
-                                        DispatchQueue.main.async {
-                                            let alertView = ErrorView(message: error.localizedDescription)
-                                            alertView.show(in: self)
-                                        }
+                                        let alertView = ErrorView(message: error.localizedDescription)
+                                        alertView.show(in: self)
         }
     }
 }

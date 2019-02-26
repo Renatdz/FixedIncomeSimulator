@@ -29,19 +29,20 @@ final class RequestAPIClient: APIClient {
 
     private func request(_ fullPath: URL,
                          method: MethodHTTP,
-//                         parameters: Parameters?,
-//                         encoding: Alamofire.ParameterEncoding,
-//                         headers: HTTPHeaders?,
                          completion: @escaping (Result<Data>) -> Void) {
         var request = URLRequest(url: fullPath)
         request.httpMethod = method.rawValue
 
         let dataTask = urlSession.dataTask(with: request) { data, _, error in
             guard let data = data, error == nil else {
-                completion(.failure(GenericError.noConnection)); return
+                DispatchQueue.main.async {
+                    completion(.failure(GenericError.noConnection))
+                }
+                return
             }
-
-            completion(.success(data))
+            DispatchQueue.main.async {
+                completion(.success(data))
+            }
         }
 
         dataTask.resume()

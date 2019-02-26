@@ -48,24 +48,24 @@ final class FormViewModelTests: QuickSpec {
                 }
             }
             
-//            context("when simulate is called with a valid data and failure result") {
-//                beforeEach {
-//                    formViewModelDelegateMock = FormViewModelDelegateMock()
-//                    sut = FormViewModel(service: FixedIncomeServiceMock(result: .failure(GenericError.unknown)),
-//                                        delegate: formViewModelDelegateMock)
-//                }
-//
-//                it("should be returned a GenericError") {
-//                    waitUntil { done in
-//                        sut.simulateIncome(investedValue: "R$ 1.000",
-//                                           investimentDueDate: "10/10/2023",
-//                                           cdiPercentage: "123%") { error in
-//                            expect(error.localizedDescription) == GenericError.unknown.localizedDescription
-//                            done()
-//                        }
-//                    }
-//                }
-//            }
+            context("when simulate is called with a valid data and failure result") {
+                beforeEach {
+                    formViewModelDelegateMock = FormViewModelDelegateMock()
+                    sut = FormViewModel(service: FixedIncomeServiceMock(result: .failure(GenericError.unknown)),
+                                        delegate: formViewModelDelegateMock)
+                }
+
+                it("should be returned a GenericError") {
+                    waitUntil { done in
+                        sut.simulateIncome(investedValue: "R$ 1.000",
+                                           investimentDueDate: "10/10/2023",
+                                           cdiPercentage: "123%") { error in
+                            expect(error.localizedDescription) == GenericError.unknown.localizedDescription
+                            done()
+                        }
+                    }
+                }
+            }
         }
     }
 }

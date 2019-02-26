@@ -29,6 +29,14 @@ extension String {
         return self
     }
 
+    var systemCurrency: Double {
+        let stringWithoutSymbol = self.replacingOccurrences(of: "R$", with: "")
+        let stringWithoutWhitespace = stringWithoutSymbol.trimmingCharacters(in: .whitespaces)
+        let stringWithoutComma = stringWithoutWhitespace.replacingOccurrences(of: ".", with: "")
+
+        return Double(stringWithoutComma) ?? 0
+    }
+
     var brazilianDateFormat: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
