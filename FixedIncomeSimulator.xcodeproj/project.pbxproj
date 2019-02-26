@@ -46,6 +46,15 @@
 		A50FC3002224CC6A00E8A110 /* FormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2FF2224CC6A00E8A110 /* FormViewModelTests.swift */; };
 		A50FC3022225897400E8A110 /* FormViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3012225897400E8A110 /* FormViewModelDelegateMock.swift */; };
 		A50FC30422258F1D00E8A110 /* FormCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC30322258F1D00E8A110 /* FormCoordinatorTests.swift */; };
+		A50FC3072225CA6F00E8A110 /* ResultCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3062225CA6F00E8A110 /* ResultCoordinatorTests.swift */; };
+		A50FC3092225CBAA00E8A110 /* ResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3082225CBAA00E8A110 /* ResultViewModelTests.swift */; };
+		A50FC30B2225CE0800E8A110 /* ResultViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC30A2225CE0800E8A110 /* ResultViewModelDelegateMock.swift */; };
+		A50FC30D2225D12B00E8A110 /* ResultViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC30C2225D12B00E8A110 /* ResultViewControllerTests.swift */; };
+		A50FC30F2225D31500E8A110 /* ResultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC30E2225D31500E8A110 /* ResultViewTests.swift */; };
+		A50FC3112225D3C200E8A110 /* ResultViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3102225D3C200E8A110 /* ResultViewDelegateMock.swift */; };
+		A50FC3132225D52C00E8A110 /* ListResultDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3122225D52C00E8A110 /* ListResultDataSourceTests.swift */; };
+		A50FC3152225D9B600E8A110 /* ResultCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3142225D9B600E8A110 /* ResultCellViewModelTests.swift */; };
+		A50FC3172225DAC800E8A110 /* ResultCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3162225DAC800E8A110 /* ResultCellTests.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -117,6 +126,15 @@
 		A50FC2FF2224CC6A00E8A110 /* FormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModelTests.swift; sourceTree = "<group>"; };
 		A50FC3012225897400E8A110 /* FormViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModelDelegateMock.swift; sourceTree = "<group>"; };
 		A50FC30322258F1D00E8A110 /* FormCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinatorTests.swift; sourceTree = "<group>"; };
+		A50FC3062225CA6F00E8A110 /* ResultCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinatorTests.swift; sourceTree = "<group>"; };
+		A50FC3082225CBAA00E8A110 /* ResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModelTests.swift; sourceTree = "<group>"; };
+		A50FC30A2225CE0800E8A110 /* ResultViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModelDelegateMock.swift; sourceTree = "<group>"; };
+		A50FC30C2225D12B00E8A110 /* ResultViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerTests.swift; sourceTree = "<group>"; };
+		A50FC30E2225D31500E8A110 /* ResultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewTests.swift; sourceTree = "<group>"; };
+		A50FC3102225D3C200E8A110 /* ResultViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewDelegateMock.swift; sourceTree = "<group>"; };
+		A50FC3122225D52C00E8A110 /* ListResultDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultDataSourceTests.swift; sourceTree = "<group>"; };
+		A50FC3142225D9B600E8A110 /* ResultCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellViewModelTests.swift; sourceTree = "<group>"; };
+		A50FC3162225DAC800E8A110 /* ResultCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellTests.swift; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +278,8 @@
 				A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */,
 				A50FC2FD2224C94800E8A110 /* FixedIncomeServiceMock.swift */,
 				A50FC3012225897400E8A110 /* FormViewModelDelegateMock.swift */,
+				A50FC30A2225CE0800E8A110 /* ResultViewModelDelegateMock.swift */,
+				A50FC3102225D3C200E8A110 /* ResultViewDelegateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -297,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				A50FC2F622249FC200E8A110 /* Form */,
+				A50FC3052225932900E8A110 /* Result */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -310,6 +331,20 @@
 				A50FC2F722249FF500E8A110 /* FormViewTests.swift */,
 			);
 			path = Form;
+			sourceTree = "<group>";
+		};
+		A50FC3052225932900E8A110 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				A50FC3062225CA6F00E8A110 /* ResultCoordinatorTests.swift */,
+				A50FC3082225CBAA00E8A110 /* ResultViewModelTests.swift */,
+				A50FC30C2225D12B00E8A110 /* ResultViewControllerTests.swift */,
+				A50FC30E2225D31500E8A110 /* ResultViewTests.swift */,
+				A50FC3122225D52C00E8A110 /* ListResultDataSourceTests.swift */,
+				A50FC3142225D9B600E8A110 /* ResultCellViewModelTests.swift */,
+				A50FC3162225DAC800E8A110 /* ResultCellTests.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		A569AA6D222073FF00CFF5A7 = {
@@ -695,6 +730,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50FC3002224CC6A00E8A110 /* FormViewModelTests.swift in Sources */,
+				A50FC30B2225CE0800E8A110 /* ResultViewModelDelegateMock.swift in Sources */,
 				A50FC2DC2224915100E8A110 /* APIClientMock.swift in Sources */,
 				A50FC2E6222493C600E8A110 /* FixedIncomeServiceTests.swift in Sources */,
 				A50FC2EF22249ADD00E8A110 /* DescriptionLabelTests.swift in Sources */,
@@ -702,18 +738,26 @@
 				A50FC2E12224926700E8A110 /* SimulateEndpoint.swift in Sources */,
 				A50FC2E42224935700E8A110 /* ServiceFactoryTests.swift in Sources */,
 				A50FC2DA2224905C00E8A110 /* SimulationMock.swift in Sources */,
+				A50FC3072225CA6F00E8A110 /* ResultCoordinatorTests.swift in Sources */,
 				A50FC2E82224947000E8A110 /* ErrorHandlerTests.swift in Sources */,
+				A50FC30D2225D12B00E8A110 /* ResultViewControllerTests.swift in Sources */,
 				A50FC2EB222496FE00E8A110 /* DefaultButtonTests.swift in Sources */,
 				A50FC2FA2224A14900E8A110 /* FormViewDelegateMock.swift in Sources */,
+				A50FC3112225D3C200E8A110 /* ResultViewDelegateMock.swift in Sources */,
 				A50FC2F822249FF500E8A110 /* FormViewTests.swift in Sources */,
 				A50FC2ED2224991C00E8A110 /* DefaultStackViewTests.swift in Sources */,
 				A50FC2D722248FC800E8A110 /* ErrorHandlerAPIClientTests.swift in Sources */,
+				A50FC3172225DAC800E8A110 /* ResultCellTests.swift in Sources */,
+				A50FC3132225D52C00E8A110 /* ListResultDataSourceTests.swift in Sources */,
+				A50FC30F2225D31500E8A110 /* ResultViewTests.swift in Sources */,
 				A50FC2DE222491AA00E8A110 /* ErrorHandlerMock.swift in Sources */,
 				A50FC2FE2224C94800E8A110 /* FixedIncomeServiceMock.swift in Sources */,
 				A50FC30422258F1D00E8A110 /* FormCoordinatorTests.swift in Sources */,
 				A50FC2F122249C5500E8A110 /* ErrorViewTests.swift in Sources */,
 				A50FC2FC2224A3B200E8A110 /* FormViewControllerTests.swift in Sources */,
 				A50FC2F322249E3000E8A110 /* MaskTextFieldTests.swift in Sources */,
+				A50FC3092225CBAA00E8A110 /* ResultViewModelTests.swift in Sources */,
+				A50FC3152225D9B600E8A110 /* ResultCellViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

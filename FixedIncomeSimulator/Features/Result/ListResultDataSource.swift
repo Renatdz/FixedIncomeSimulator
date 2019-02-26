@@ -14,6 +14,10 @@ final class ListResultDataSource: NSObject {
     func set(_ viewModels: [ResultCellViewModel]) {
         self.viewModels.append(contentsOf: viewModels)
     }
+
+    func clear() {
+        viewModels.removeAll()
+    }
 }
 
 extension ListResultDataSource: UITableViewDataSource {

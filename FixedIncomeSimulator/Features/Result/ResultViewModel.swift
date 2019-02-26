@@ -35,9 +35,9 @@ final class ResultViewModel {
     private let periodRateProfitDescription: String = "Rentabilidade no período"
     private var periodRateProfit: String
 
-    private(set) var matrixValues: [[String]] = [[]]
+    private(set) var matrixValues: [[String]] = []
 
-    init(simulation: Simulation, delegate: ResultViewModelDelegate) {
+    init(simulation: Simulation, delegate: ResultViewModelDelegate?) {
         investedAmount = simulation.investmentParameter.investedAmount.currency
         grossAmount = simulation.grossAmount.currency
         grossAmountProfit = simulation.grossAmountProfit.currency

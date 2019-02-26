@@ -17,7 +17,7 @@ final class ResultView: UIView {
 
     // MARK: - UI Components
     private lazy var contentStackView: DefaultStackView = {
-        return DefaultStackView(distribution: .fill, axis: .vertical, spacing: 30)
+        return DefaultStackView(distribution: .fill, axis: .vertical, spacing: 40)
     }()
 
     private lazy var headerView: UIView = {
@@ -58,7 +58,7 @@ final class ResultView: UIView {
         return tableView
     }()
 
-    private lazy var simulateAgainBT: DefaultButton = {
+    private(set) lazy var simulateAgainBT: DefaultButton = {
         let button = DefaultButton(title: "Simular novamente")
         button.addTarget(self, action: #selector(simulateAgainBTWasPressed), for: .touchUpInside)
         return button
@@ -72,7 +72,7 @@ final class ResultView: UIView {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 }
 

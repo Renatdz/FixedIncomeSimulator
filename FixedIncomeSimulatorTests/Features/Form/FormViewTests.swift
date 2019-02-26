@@ -38,7 +38,7 @@ final class FormViewTests: QuickSpec {
                 }
             }
 
-            context("when formView call de FormViewDelegate") {
+            context("when formView call the FormViewDelegate") {
                 var formViewDelegateMock: FormViewDelegateMock!
 
                 beforeEach {
