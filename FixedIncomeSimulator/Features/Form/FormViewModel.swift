@@ -87,7 +87,7 @@ final class FormViewModel {
         validInvestedValue = validInvestedValue.trimmingCharacters(in: .whitespaces)
         self.investedValue = Double(validInvestedValue) ?? 0
 
-        self.investimentDueDate = investimentDueDate
+        self.investimentDueDate = investimentDueDate.systemDateFormat
 
         let validCdiPercentage = cdiPercentage.replacingOccurrences(of: "%", with: "")
         self.cdiPercentageValue = Int(validCdiPercentage) ?? 0

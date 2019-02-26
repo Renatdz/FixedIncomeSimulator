@@ -36,4 +36,12 @@ extension String {
         dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.string(from: date ?? Date())
     }
+
+    var systemDateFormat: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let date = dateFormatter.date(from: self)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date ?? Date())
+    }
 }
