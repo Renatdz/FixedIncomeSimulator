@@ -42,6 +42,10 @@
 		A50FC2F822249FF500E8A110 /* FormViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F722249FF500E8A110 /* FormViewTests.swift */; };
 		A50FC2FA2224A14900E8A110 /* FormViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */; };
 		A50FC2FC2224A3B200E8A110 /* FormViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2FB2224A3B200E8A110 /* FormViewControllerTests.swift */; };
+		A50FC2FE2224C94800E8A110 /* FixedIncomeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2FD2224C94800E8A110 /* FixedIncomeServiceMock.swift */; };
+		A50FC3002224CC6A00E8A110 /* FormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2FF2224CC6A00E8A110 /* FormViewModelTests.swift */; };
+		A50FC3022225897400E8A110 /* FormViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3012225897400E8A110 /* FormViewModelDelegateMock.swift */; };
+		A50FC30422258F1D00E8A110 /* FormCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC30322258F1D00E8A110 /* FormCoordinatorTests.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -109,6 +113,10 @@
 		A50FC2F722249FF500E8A110 /* FormViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewTests.swift; sourceTree = "<group>"; };
 		A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewDelegateMock.swift; sourceTree = "<group>"; };
 		A50FC2FB2224A3B200E8A110 /* FormViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewControllerTests.swift; sourceTree = "<group>"; };
+		A50FC2FD2224C94800E8A110 /* FixedIncomeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeServiceMock.swift; sourceTree = "<group>"; };
+		A50FC2FF2224CC6A00E8A110 /* FormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModelTests.swift; sourceTree = "<group>"; };
+		A50FC3012225897400E8A110 /* FormViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModelDelegateMock.swift; sourceTree = "<group>"; };
+		A50FC30322258F1D00E8A110 /* FormCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinatorTests.swift; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +258,8 @@
 				A50FC2DB2224915100E8A110 /* APIClientMock.swift */,
 				A50FC2DD222491AA00E8A110 /* ErrorHandlerMock.swift */,
 				A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */,
+				A50FC2FD2224C94800E8A110 /* FixedIncomeServiceMock.swift */,
+				A50FC3012225897400E8A110 /* FormViewModelDelegateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -294,8 +304,10 @@
 		A50FC2F622249FC200E8A110 /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				A50FC2F722249FF500E8A110 /* FormViewTests.swift */,
+				A50FC30322258F1D00E8A110 /* FormCoordinatorTests.swift */,
+				A50FC2FF2224CC6A00E8A110 /* FormViewModelTests.swift */,
 				A50FC2FB2224A3B200E8A110 /* FormViewControllerTests.swift */,
+				A50FC2F722249FF500E8A110 /* FormViewTests.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -682,9 +694,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50FC3002224CC6A00E8A110 /* FormViewModelTests.swift in Sources */,
 				A50FC2DC2224915100E8A110 /* APIClientMock.swift in Sources */,
 				A50FC2E6222493C600E8A110 /* FixedIncomeServiceTests.swift in Sources */,
 				A50FC2EF22249ADD00E8A110 /* DescriptionLabelTests.swift in Sources */,
+				A50FC3022225897400E8A110 /* FormViewModelDelegateMock.swift in Sources */,
 				A50FC2E12224926700E8A110 /* SimulateEndpoint.swift in Sources */,
 				A50FC2E42224935700E8A110 /* ServiceFactoryTests.swift in Sources */,
 				A50FC2DA2224905C00E8A110 /* SimulationMock.swift in Sources */,
@@ -695,6 +709,8 @@
 				A50FC2ED2224991C00E8A110 /* DefaultStackViewTests.swift in Sources */,
 				A50FC2D722248FC800E8A110 /* ErrorHandlerAPIClientTests.swift in Sources */,
 				A50FC2DE222491AA00E8A110 /* ErrorHandlerMock.swift in Sources */,
+				A50FC2FE2224C94800E8A110 /* FixedIncomeServiceMock.swift in Sources */,
+				A50FC30422258F1D00E8A110 /* FormCoordinatorTests.swift in Sources */,
 				A50FC2F122249C5500E8A110 /* ErrorViewTests.swift in Sources */,
 				A50FC2FC2224A3B200E8A110 /* FormViewControllerTests.swift in Sources */,
 				A50FC2F322249E3000E8A110 /* MaskTextFieldTests.swift in Sources */,

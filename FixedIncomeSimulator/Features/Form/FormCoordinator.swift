@@ -27,8 +27,6 @@ final class FormCoordinator: Coordinator {
 // MARK: - FormViewModelDelegate
 extension FormCoordinator: FormViewModelDelegate {
     func showResult(with simulation: Simulation) {
-        print("SIMULATION HERE MODAFOCKA ---- \(simulation)")
-        
         let resultCoordinator = ResultCoordinator(simulation: simulation,
                                                   service: service,
                                                   navigationController: navigationController)

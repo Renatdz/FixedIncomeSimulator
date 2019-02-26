@@ -12,7 +12,7 @@ import Nimble
 
 @testable import FixedIncomeSimulator
 
-class ErrorHandlerAPIClientTests: QuickSpec {
+final class ErrorHandlerAPIClientTests: QuickSpec {
     var sut: ErrorHandlerAPIClient!
     var apiClient: APIClientMock!
     var errorHandler: ErrorHandlerMock!
