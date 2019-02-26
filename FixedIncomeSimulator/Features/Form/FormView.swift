@@ -104,6 +104,16 @@ final class FormView: UIView {
     }
 }
 
+extension FormView {
+    func showLoading() {
+        simulateBT.loadingIndicator(true)
+    }
+
+    func hideLoading() {
+        simulateBT.loadingIndicator(false)
+    }
+}
+
 // MARK: - Selectors
 extension FormView {
     @objc

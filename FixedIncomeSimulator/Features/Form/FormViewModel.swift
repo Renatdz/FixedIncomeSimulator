@@ -30,7 +30,7 @@ final class FormViewModel {
     func simulateIncome(investedValue: String,
                         investimentDueDate: String,
                         cdiPercentage: String,
-                        completion: @escaping (PrintableError) -> Void) {
+                        completion: @escaping (PrintableError?) -> Void) {
         if !isValid(investedValue: investedValue,
                     investimentDueDate: investimentDueDate,
                     cdiPercentage: cdiPercentage) {
@@ -41,6 +41,7 @@ final class FormViewModel {
             switch result {
             case let .success(simulation):
                 self?.delegate?.showResult(with: simulation)
+                completion(nil)
 
             case let .failure(error):
                 completion(error)

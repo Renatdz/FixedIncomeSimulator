@@ -26,7 +26,7 @@ final class FormViewModelTests: QuickSpec {
                 it("should be returned a invalidData error") {
                     waitUntil { done in
                         sut.simulateIncome(investedValue: "", investimentDueDate: "", cdiPercentage: "") { error in
-                            expect(error.localizedDescription) == FormError.invalidForm.localizedDescription
+                            expect(error?.localizedDescription) == FormError.invalidForm.localizedDescription
                             done()
                         }
                     }
@@ -47,7 +47,7 @@ final class FormViewModelTests: QuickSpec {
                     expect(formViewModelDelegateMock.isShowResultCalled) == true
                 }
             }
-            
+
             context("when simulate is called with a valid data and failure result") {
                 beforeEach {
                     formViewModelDelegateMock = FormViewModelDelegateMock()
@@ -60,7 +60,7 @@ final class FormViewModelTests: QuickSpec {
                         sut.simulateIncome(investedValue: "R$ 1.000",
                                            investimentDueDate: "10/10/2023",
                                            cdiPercentage: "123%") { error in
-                            expect(error.localizedDescription) == GenericError.unknown.localizedDescription
+                            expect(error?.localizedDescription) == GenericError.unknown.localizedDescription
                             done()
                         }
                     }

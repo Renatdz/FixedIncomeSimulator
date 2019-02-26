@@ -38,6 +38,33 @@ final class FormViewTests: QuickSpec {
                 }
             }
 
+            context("when loading") {
+                beforeEach {
+                    sut = FormView()
+                    sut.frame = CGRect(x: 0, y: 0, width: 414, height: 736)
+                }
+
+                context("is called") {
+                    beforeEach {
+                        sut.showLoading()
+                    }
+
+                    it("loading should be running") {
+                        expect(sut.simulateBT.indicator.isAnimating) == true
+                    }
+                }
+
+                context("is hide") {
+                    beforeEach {
+                        sut.hideLoading()
+                    }
+
+                    it("loading shouldn't be running") {
+                        expect(sut.simulateBT.indicator.isAnimating) == false
+                    }
+                }
+            }
+
             context("when formView call the FormViewDelegate") {
                 var formViewDelegateMock: FormViewDelegateMock!
 
