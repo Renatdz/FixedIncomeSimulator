@@ -53,7 +53,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5249D8022262AFE00497FE4"
+               BlueprintIdentifier = "A5249E01222639D300497FE4"
                BuildableName = "FixedIncomeSimulatorKIFTests.xctest"
                BlueprintName = "FixedIncomeSimulatorKIFTests"
                ReferencedContainer = "container:FixedIncomeSimulator.xcodeproj">

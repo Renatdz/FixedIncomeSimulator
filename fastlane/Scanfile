@@ -1,0 +1,9 @@
+scheme("FixedIncomeSimulator")
+
+clean(true)
+
+skip_build(true)
+
+devices(["iPhone 8 Plus (12.1)"])
+
+code_coverage(true)
