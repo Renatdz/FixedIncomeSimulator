@@ -49,6 +49,16 @@
                ReferencedContainer = "container:FixedIncomeSimulator.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A5249D8022262AFE00497FE4"
+               BuildableName = "FixedIncomeSimulatorKIFTests.xctest"
+               BlueprintName = "FixedIncomeSimulatorKIFTests"
+               ReferencedContainer = "container:FixedIncomeSimulator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

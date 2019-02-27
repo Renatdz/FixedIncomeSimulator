@@ -40,6 +40,7 @@ final class FormView: UIView {
     private lazy var investedValueTF: MaskTextField = {
         let textField = MaskTextField(placeholder: "R$", maskStyle: .currency)
         textField.inputAccessoryView = keyboardToolBar
+        textField.accessibilityIdentifier = "InvestedValue_TextField_Identifier"
         return textField
     }()
 
@@ -57,6 +58,7 @@ final class FormView: UIView {
     private lazy var investimentDueDateTF: MaskTextField = {
         let textField = MaskTextField(placeholder: "dia/mês/ano", maskStyle: .date)
         textField.inputAccessoryView = keyboardToolBar
+        textField.accessibilityIdentifier = "InvestmentDueDate_TextField_Identifier"
         return textField
     }()
 
@@ -74,6 +76,7 @@ final class FormView: UIView {
     private lazy var cdiPercentageTF: MaskTextField = {
         let textField = MaskTextField(placeholder: "100%", maskStyle: .percentage)
         textField.inputAccessoryView = keyboardToolBar
+        textField.accessibilityIdentifier = "CdiPercentage_TextField_Identifier"
         return textField
     }()
 
@@ -87,6 +90,7 @@ final class FormView: UIView {
     private(set) lazy var simulateBT: DefaultButton = {
         let button = DefaultButton(title: "Simular")
         button.addTarget(self, action: #selector(simulateBTWasPressed), for: .touchUpInside)
+        button.accessibilityIdentifier = "FormView_SimulateBT_Identifier.button"
         return button
     }()
 
@@ -100,6 +104,7 @@ final class FormView: UIView {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         endEditing(true)
     }
 }

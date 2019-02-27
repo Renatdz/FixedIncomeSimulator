@@ -11,5 +11,10 @@ target 'FixedIncomeSimulator' do
     pod 'Quick'
     pod 'Nimble'
     pod 'Nimble-Snapshots'
+
+    target 'FixedIncomeSimulatorKIFTests' do
+      pod 'KIF'
+      pod 'KIF-Quick'
+    end
   end
 end

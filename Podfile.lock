@@ -5,6 +5,12 @@ PODS:
   - iOSSnapshotTestCase/SwiftSupport (5.0.2):
     - iOSSnapshotTestCase/Core
   - IQKeyboardManagerSwift (6.2.0)
+  - KIF (3.7.4):
+    - KIF/Core (= 3.7.4)
+  - KIF-Quick (1.1.0):
+    - KIF (~> 3.0)
+    - Quick (~> 1.0)
+  - KIF/Core (3.7.4)
   - Nimble (7.3.4)
   - Nimble-Snapshots (6.9.1):
     - Nimble-Snapshots/Core (= 6.9.1)
@@ -21,6 +27,8 @@ PODS:
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - KIF
+  - KIF-Quick
   - Nimble
   - Nimble-Snapshots
   - Quick
@@ -31,6 +39,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - iOSSnapshotTestCase
     - IQKeyboardManagerSwift
+    - KIF
+    - KIF-Quick
     - Nimble
     - Nimble-Snapshots
     - Quick
@@ -40,12 +50,14 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  KIF: f3d01c109ee9d1cfe6b0f2bb2aa278e807e971e2
+  KIF-Quick: da968bbfad615fd96c0d5eb4d8fd484ecdc26814
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
   Quick: f4f7f063c524394c73ed93ac70983c609805d481
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
 
-PODFILE CHECKSUM: eff0c5e5274d7a55baec6f23a4bd404ca83cad67
+PODFILE CHECKSUM: 1016f809587a5a3a83becadc19edc2ec80a42959
 
 COCOAPODS: 1.6.1

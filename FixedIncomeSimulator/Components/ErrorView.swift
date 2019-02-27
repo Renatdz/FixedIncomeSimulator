@@ -34,6 +34,11 @@ class ErrorView: UIView {
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.hideError()
+    }
 }
 
 // MARK: - Show error with animation
@@ -51,7 +56,11 @@ extension ErrorView {
             self.frame = CGRect(x: 0, y: 0, width: controller.view.frame.width, height: 80)
             self.messageLB.alpha = 1
         }, completion: { _ in
-            self.hideError()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                if self.parentContainerViewController() != nil {
+                    self.hideError()
+                }
+            }
         })
     }
 

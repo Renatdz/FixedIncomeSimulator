@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73CF7BF0AF52C8CF70233B72 /* Pods_FixedIncomeSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */; };
+		4758C49B35CD74843D66A865 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C0F7FDA4D34DCFACF84412 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */; };
+		A05995423B9CF6A4FEE1127C /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests_FixedIncomeSimulatorKIFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35797293EEE7890025EFC3A /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests_FixedIncomeSimulatorKIFTests.framework */; };
 		A50FC2A622233D1A00E8A110 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2A522233D1A00E8A110 /* Simulation.swift */; };
 		A50FC2A822233E6E00E8A110 /* InvestmentParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2A722233E6E00E8A110 /* InvestmentParameter.swift */; };
 		A50FC2AA2223477C00E8A110 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2A92223477C00E8A110 /* Double+Extension.swift */; };
@@ -55,6 +56,15 @@
 		A50FC3132225D52C00E8A110 /* ListResultDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3122225D52C00E8A110 /* ListResultDataSourceTests.swift */; };
 		A50FC3152225D9B600E8A110 /* ResultCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3142225D9B600E8A110 /* ResultCellViewModelTests.swift */; };
 		A50FC3172225DAC800E8A110 /* ResultCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3162225DAC800E8A110 /* ResultCellTests.swift */; };
+		A5249E0C222639F500497FE4 /* SimulationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2D92224905C00E8A110 /* SimulationMock.swift */; };
+		A5249E0D222639F500497FE4 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2DB2224915100E8A110 /* APIClientMock.swift */; };
+		A5249E0E222639F500497FE4 /* ErrorHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2DD222491AA00E8A110 /* ErrorHandlerMock.swift */; };
+		A5249E0F222639F500497FE4 /* FormViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2F92224A14900E8A110 /* FormViewDelegateMock.swift */; };
+		A5249E10222639F500497FE4 /* FixedIncomeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC2FD2224C94800E8A110 /* FixedIncomeServiceMock.swift */; };
+		A5249E11222639F500497FE4 /* FormViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3012225897400E8A110 /* FormViewModelDelegateMock.swift */; };
+		A5249E12222639F500497FE4 /* ResultViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC30A2225CE0800E8A110 /* ResultViewModelDelegateMock.swift */; };
+		A5249E13222639F500497FE4 /* ResultViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50FC3102225D3C200E8A110 /* ResultViewDelegateMock.swift */; };
+		A5249E1522263A5D00497FE4 /* FormCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5249E1422263A5D00497FE4 /* FormCoordinatorTests.swift */; };
 		A569AA7A222073FF00CFF5A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA79222073FF00CFF5A7 /* AppDelegate.swift */; };
 		A569AA7C222073FF00CFF5A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AA7B222073FF00CFF5A7 /* FormViewController.swift */; };
 		A569AA812220740100CFF5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569AA802220740100CFF5A7 /* Assets.xcassets */; };
@@ -72,10 +82,17 @@
 		A5E93EFF2223184400EE3F9D /* ResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93EFE2223184400EE3F9D /* ResultCoordinator.swift */; };
 		A5E93F012223198B00EE3F9D /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F002223198B00EE3F9D /* ResultViewModel.swift */; };
 		A5E93F0522231AF100EE3F9D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F0422231AF100EE3F9D /* ResultViewController.swift */; };
-		F87E41E5F1B9D9FB3DB077A3 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1AEBD3EBB69278D003B713 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */; };
+		B540D899E187680958527573 /* Pods_FixedIncomeSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B240FFE7ED14421347CAF99D /* Pods_FixedIncomeSimulator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A5249E07222639D300497FE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A569AA6E222073FF00CFF5A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A569AA75222073FF00CFF5A7;
+			remoteInfo = FixedIncomeSimulator;
+		};
 		A569AA8B2220740100CFF5A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A569AA6E222073FF00CFF5A7 /* Project object */;
@@ -86,8 +103,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C42C246EA9CF56D9E46DC32 /* Pods-FixedIncomeSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.debug.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.debug.xcconfig"; sourceTree = "<group>"; };
-		9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1469E64D15C948441BAB64CA /* Pods-FixedIncomeSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.debug.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.debug.xcconfig"; sourceTree = "<group>"; };
+		337CDFC754EF11BB8BEB8680 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.debug.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B1E423B32C9F5C54A2EF266 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EF5E89BC7542A507A4CFA6B /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		77EFFA5B0787AD44B688C61B /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A50FC2A522233D1A00E8A110 /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
 		A50FC2A722233E6E00E8A110 /* InvestmentParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentParameter.swift; sourceTree = "<group>"; };
 		A50FC2A92223477C00E8A110 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
@@ -135,6 +155,9 @@
 		A50FC3122225D52C00E8A110 /* ListResultDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultDataSourceTests.swift; sourceTree = "<group>"; };
 		A50FC3142225D9B600E8A110 /* ResultCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellViewModelTests.swift; sourceTree = "<group>"; };
 		A50FC3162225DAC800E8A110 /* ResultCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellTests.swift; sourceTree = "<group>"; };
+		A5249E02222639D300497FE4 /* FixedIncomeSimulatorKIFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixedIncomeSimulatorKIFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5249E06222639D300497FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5249E1422263A5D00497FE4 /* FormCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinatorTests.swift; sourceTree = "<group>"; };
 		A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedIncomeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569AA79222073FF00CFF5A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569AA7B222073FF00CFF5A7 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -156,18 +179,26 @@
 		A5E93EFE2223184400EE3F9D /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
 		A5E93F002223198B00EE3F9D /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		A5E93F0422231AF100EE3F9D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		AC1AEBD3EBB69278D003B713 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC74436661C0C368BC1CD322 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig"; sourceTree = "<group>"; };
-		B7C8C93E1DDA19133A67CE3D /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.release.xcconfig"; sourceTree = "<group>"; };
+		B240FFE7ED14421347CAF99D /* Pods_FixedIncomeSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B516277182FB4693E77B0804 /* Pods-FixedIncomeSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedIncomeSimulator.release.xcconfig"; path = "Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator.release.xcconfig"; sourceTree = "<group>"; };
+		B8C0F7FDA4D34DCFACF84412 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35797293EEE7890025EFC3A /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests_FixedIncomeSimulatorKIFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests_FixedIncomeSimulatorKIFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A5249DFF222639D300497FE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05995423B9CF6A4FEE1127C /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests_FixedIncomeSimulatorKIFTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A569AA73222073FF00CFF5A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73CF7BF0AF52C8CF70233B72 /* Pods_FixedIncomeSimulator.framework in Frameworks */,
+				B540D899E187680958527573 /* Pods_FixedIncomeSimulator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87E41E5F1B9D9FB3DB077A3 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework in Frameworks */,
+				4758C49B35CD74843D66A865 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,21 +216,14 @@
 		1A914ADECBC05A377223D442 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3C42C246EA9CF56D9E46DC32 /* Pods-FixedIncomeSimulator.debug.xcconfig */,
-				F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */,
-				B7C8C93E1DDA19133A67CE3D /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */,
-				AC74436661C0C368BC1CD322 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */,
+				1469E64D15C948441BAB64CA /* Pods-FixedIncomeSimulator.debug.xcconfig */,
+				B516277182FB4693E77B0804 /* Pods-FixedIncomeSimulator.release.xcconfig */,
+				77EFFA5B0787AD44B688C61B /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */,
+				6EF5E89BC7542A507A4CFA6B /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */,
+				337CDFC754EF11BB8BEB8680 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.debug.xcconfig */,
+				5B1E423B32C9F5C54A2EF266 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		3285119C448C7570182174D9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9F850C5C946FC7E766D3EF81 /* Pods_FixedIncomeSimulator.framework */,
-				AC1AEBD3EBB69278D003B713 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A50FC2A422233CAE00E8A110 /* Models */ = {
@@ -347,14 +371,24 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		A5249E03222639D300497FE4 /* FixedIncomeSimulatorKIFTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5249E06222639D300497FE4 /* Info.plist */,
+				A5249E1422263A5D00497FE4 /* FormCoordinatorTests.swift */,
+			);
+			path = FixedIncomeSimulatorKIFTests;
+			sourceTree = "<group>";
+		};
 		A569AA6D222073FF00CFF5A7 = {
 			isa = PBXGroup;
 			children = (
 				A569AA78222073FF00CFF5A7 /* FixedIncomeSimulator */,
 				A569AA8D2220740100CFF5A7 /* FixedIncomeSimulatorTests */,
+				A5249E03222639D300497FE4 /* FixedIncomeSimulatorKIFTests */,
 				A569AA77222073FF00CFF5A7 /* Products */,
 				1A914ADECBC05A377223D442 /* Pods */,
-				3285119C448C7570182174D9 /* Frameworks */,
+				AFFD4F22FDAEBB6A911A077D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -363,6 +397,7 @@
 			children = (
 				A569AA76222073FF00CFF5A7 /* FixedIncomeSimulator.app */,
 				A569AA8A2220740100CFF5A7 /* FixedIncomeSimulatorTests.xctest */,
+				A5249E02222639D300497FE4 /* FixedIncomeSimulatorKIFTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,19 +497,49 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		AFFD4F22FDAEBB6A911A077D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B240FFE7ED14421347CAF99D /* Pods_FixedIncomeSimulator.framework */,
+				B8C0F7FDA4D34DCFACF84412 /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests.framework */,
+				D35797293EEE7890025EFC3A /* Pods_FixedIncomeSimulator_FixedIncomeSimulatorTests_FixedIncomeSimulatorKIFTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A5249E01222639D300497FE4 /* FixedIncomeSimulatorKIFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5249E0B222639D300497FE4 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulatorKIFTests" */;
+			buildPhases = (
+				B8A7DC2AE47E2A597CDDCB12 /* [CP] Check Pods Manifest.lock */,
+				A5249DFE222639D300497FE4 /* Sources */,
+				A5249DFF222639D300497FE4 /* Frameworks */,
+				A5249E00222639D300497FE4 /* Resources */,
+				B96E7FC0AF9324FB51E82373 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5249E08222639D300497FE4 /* PBXTargetDependency */,
+			);
+			name = FixedIncomeSimulatorKIFTests;
+			productName = FixedIncomeSimulatorKIFTests;
+			productReference = A5249E02222639D300497FE4 /* FixedIncomeSimulatorKIFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A569AA75222073FF00CFF5A7 /* FixedIncomeSimulator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A569AA9E2220740100CFF5A7 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulator" */;
 			buildPhases = (
-				D25C2F48BB36B66C276BEA64 /* [CP] Check Pods Manifest.lock */,
+				9B97A4CDBB8284828A71ACFA /* [CP] Check Pods Manifest.lock */,
 				A569AAA8222076CD00CFF5A7 /* [SL] Lint */,
 				A569AA72222073FF00CFF5A7 /* Sources */,
 				A569AA73222073FF00CFF5A7 /* Frameworks */,
 				A569AA74222073FF00CFF5A7 /* Resources */,
-				9A8BCC9A9F0FDB33272ECA8D /* [CP] Embed Pods Frameworks */,
+				81ACC57E2314BFDECD6485E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -489,11 +554,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A569AAA12220740100CFF5A7 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulatorTests" */;
 			buildPhases = (
-				5A26981707710C22A063ACCB /* [CP] Check Pods Manifest.lock */,
+				AA59366E8ACA4F54D282E5CD /* [CP] Check Pods Manifest.lock */,
 				A569AA862220740100CFF5A7 /* Sources */,
 				A569AA872220740100CFF5A7 /* Frameworks */,
 				A569AA882220740100CFF5A7 /* Resources */,
-				7D9B7EB86BF347BB7A8BA314 /* [CP] Embed Pods Frameworks */,
+				EA6492C9ED9896D25BC75D89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -515,6 +580,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Renato Mendes";
 				TargetAttributes = {
+					A5249E01222639D300497FE4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A569AA75222073FF00CFF5A7;
+					};
 					A569AA75222073FF00CFF5A7 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -540,11 +609,19 @@
 			targets = (
 				A569AA75222073FF00CFF5A7 /* FixedIncomeSimulator */,
 				A569AA892220740100CFF5A7 /* FixedIncomeSimulatorTests */,
+				A5249E01222639D300497FE4 /* FixedIncomeSimulatorKIFTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A5249E00222639D300497FE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A569AA74222073FF00CFF5A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,7 +641,71 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A26981707710C22A063ACCB /* [CP] Check Pods Manifest.lock */ = {
+		81ACC57E2314BFDECD6485E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B97A4CDBB8284828A71ACFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FixedIncomeSimulator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A569AAA8222076CD00CFF5A7 /* [SL] Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SL] Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		AA59366E8ACA4F54D282E5CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -586,7 +727,65 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7D9B7EB86BF347BB7A8BA314 /* [CP] Embed Pods Frameworks */ = {
+		B8A7DC2AE47E2A597CDDCB12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B96E7FC0AF9324FB51E82373 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF-Quick/KIF_Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF_Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA6492C9ED9896D25BC75D89 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -618,73 +817,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests/Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9A8BCC9A9F0FDB33272ECA8D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FixedIncomeSimulator/Pods-FixedIncomeSimulator-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A569AAA8222076CD00CFF5A7 /* [SL] Lint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[SL] Lint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		D25C2F48BB36B66C276BEA64 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FixedIncomeSimulator-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A5249DFE222639D300497FE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5249E10222639F500497FE4 /* FixedIncomeServiceMock.swift in Sources */,
+				A5249E0C222639F500497FE4 /* SimulationMock.swift in Sources */,
+				A5249E0F222639F500497FE4 /* FormViewDelegateMock.swift in Sources */,
+				A5249E0D222639F500497FE4 /* APIClientMock.swift in Sources */,
+				A5249E1522263A5D00497FE4 /* FormCoordinatorTests.swift in Sources */,
+				A5249E0E222639F500497FE4 /* ErrorHandlerMock.swift in Sources */,
+				A5249E11222639F500497FE4 /* FormViewModelDelegateMock.swift in Sources */,
+				A5249E13222639F500497FE4 /* ResultViewDelegateMock.swift in Sources */,
+				A5249E12222639F500497FE4 /* ResultViewModelDelegateMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A569AA72222073FF00CFF5A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -764,6 +915,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A5249E08222639D300497FE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A569AA75222073FF00CFF5A7 /* FixedIncomeSimulator */;
+			targetProxy = A5249E07222639D300497FE4 /* PBXContainerItemProxy */;
+		};
 		A569AA8C2220740100CFF5A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A569AA75222073FF00CFF5A7 /* FixedIncomeSimulator */;
@@ -783,6 +939,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A5249E09222639D300497FE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 337CDFC754EF11BB8BEB8680 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KWEMDK92F4;
+				INFOPLIST_FILE = FixedIncomeSimulatorKIFTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rm.FixedIncomeSimulatorKIFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FixedIncomeSimulator.app/FixedIncomeSimulator";
+			};
+			name = Debug;
+		};
+		A5249E0A222639D300497FE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B1E423B32C9F5C54A2EF266 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests-FixedIncomeSimulatorKIFTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KWEMDK92F4;
+				INFOPLIST_FILE = FixedIncomeSimulatorKIFTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rm.FixedIncomeSimulatorKIFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FixedIncomeSimulator.app/FixedIncomeSimulator";
+			};
+			name = Release;
+		};
 		A569AA9C2220740100CFF5A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -901,7 +1101,7 @@
 		};
 		A569AA9F2220740100CFF5A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C42C246EA9CF56D9E46DC32 /* Pods-FixedIncomeSimulator.debug.xcconfig */;
+			baseConfigurationReference = 1469E64D15C948441BAB64CA /* Pods-FixedIncomeSimulator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -921,7 +1121,7 @@
 		};
 		A569AAA02220740100CFF5A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F49297EAE1D0D9AE36D429A7 /* Pods-FixedIncomeSimulator.release.xcconfig */;
+			baseConfigurationReference = B516277182FB4693E77B0804 /* Pods-FixedIncomeSimulator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -941,7 +1141,7 @@
 		};
 		A569AAA22220740100CFF5A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7C8C93E1DDA19133A67CE3D /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */;
+			baseConfigurationReference = 77EFFA5B0787AD44B688C61B /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -965,7 +1165,7 @@
 		};
 		A569AAA32220740100CFF5A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC74436661C0C368BC1CD322 /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */;
+			baseConfigurationReference = 6EF5E89BC7542A507A4CFA6B /* Pods-FixedIncomeSimulator-FixedIncomeSimulatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -989,6 +1189,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A5249E0B222639D300497FE4 /* Build configuration list for PBXNativeTarget "FixedIncomeSimulatorKIFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5249E09222639D300497FE4 /* Debug */,
+				A5249E0A222639D300497FE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A569AA71222073FF00CFF5A7 /* Build configuration list for PBXProject "FixedIncomeSimulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
